@@ -3,9 +3,12 @@
 ### Making a bootable USB with OS images using Ventoy
 1. Latest Ventoy installers at https://sourceforge.net/projects/ventoy/files/ Windows only - use Parallels Windows or Linux
 2. Proxmox ISO at https://www.proxmox.com/en/downloads
-3. OS ISO images at:
-   - Ubuntu SERVER Cloud-Init ISO at https://cloud-images.ubuntu.com/noble/current/
-   - Ubuntu DESKTOP ISO at https://ubuntu.com/download/desktop/
+3. ISO images at:
+   | ISO | URL |
+   |-----|-----|
+   | System Rescue ISO | https://www.system-rescue.org/Download/ |
+   | Ubuntu SERVER Cloud-Init ISO | https://cloud-images.ubuntu.com/noble/current/ |
+   | Ubuntu DESKTOP ISO: https://ubuntu.com/download/desktop/ |
 
 ### After Install basic Proxmox actions
 1. Check SSH is running
