@@ -20,6 +20,7 @@
    systemctl status ssh.service
    ```
 2) Run TTeck Proxmox VE Helper-Scripts at https://helper-scripts.com/scripts?id=Proxmox+VE+Post+Install
+   > Run TTeck scripts from Proxmox GUI shell, not SSH!
    ```
    bash -c "$(wget -qLO - https://github.com/tteck/Proxmox/raw/main/misc/post-pve-install.sh)"
    ```
@@ -45,6 +46,7 @@
         lspci -v -s 00:02.0
         ```
 4) Run TTeck Proxmox VE Processor Microcode script at https://helper-scripts.com/scripts?id=Proxmox+VE+Processor+Microcode
+   > Run TTeck scripts from Proxmox GUI shell, not SSH!
    ```
    bash -c "$(wget -qLO - https://github.com/tteck/Proxmox/raw/main/misc/microcode.sh)"
    ```
