@@ -1,13 +1,11 @@
 # Proxmox
 ## Proxmox Installation
 ### Making a bootable USB with OS images using Ventoy
-
-
-
-- [ ] Latest Ventoy installers at https://sourceforge.net/projects/ventoy/files/ Windows only - use Parallels Windows or Linux
-- [ ] Proxmox ISO at https://www.proxmox.com/en/downloads
-- [ ] Ubuntu DESKTOP ISO at https://ubuntu.com/download/desktop
-- [ ] Ubuntu SERVER Cloud-Init ISO at https://cloud-images.ubuntu.com/noble/current/
+1. Latest Ventoy installers at https://sourceforge.net/projects/ventoy/files/ Windows only - use Parallels Windows or Linux
+2. Proxmox ISO at https://www.proxmox.com/en/downloads
+3. OS ISO images
+  a. Ubuntu DESKTOP ISO at https://ubuntu.com/download/desktop/
+  b. Ubuntu SERVER Cloud-Init ISO at https://cloud-images.ubuntu.com/noble/current/
 
 After Install basic Proxmox actions
 
