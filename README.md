@@ -1,13 +1,10 @@
-# Proxmox and Ubuntu VM Installation
 *Contents*
-- [Proxmox and Ubuntu VM Installation](#proxmox-and-ubuntu-vm-installation)
+- [Making a bootable USB with OS images using Ventoy](#making-a-bootable-usb-with-os-images-using-ventoy)
 - [Proxmox Installation](#proxmox-installation)
-  - [Making a bootable USB with OS images using Ventoy](#making-a-bootable-usb-with-os-images-using-ventoy)
   - [Proxmox After Install Setup](#proxmox-after-install-setup)
   - [Proxmox Terminal Setup](#proxmox-terminal-setup)
 
-# Proxmox Installation
-## Making a bootable USB with OS images using Ventoy
+# Making a bootable USB with OS images using Ventoy
 1) Latest Ventoy installers at https://sourceforge.net/projects/ventoy/files/ Windows only - use Parallels Windows or Linux
 2) ISO images at:
    | ISO | URL |
@@ -16,7 +13,7 @@
    | Proxmox ISO | https://www.proxmox.com/en/downloads |
    | Ubuntu SERVER Cloud-Init ISO | https://cloud-images.ubuntu.com/noble/current/ |
    | Ubuntu DESKTOP ISO | https://ubuntu.com/download/desktop/ |
-
+# Proxmox Installation
 ## Proxmox After Install Setup
 1) Check that SSH is running
    ```
@@ -57,7 +54,7 @@
    apt-get install neofetch
    ```
 6) Set up Proxmox terminal
-    - Copy-and-paste [pve .bashrc](files/Proxmox files/.bashrc "Proxmox .bashrc")
+    - Copy-and-paste [Proxmox .bashrc](https://github.com/kurtshuler/proxmox-ubuntu-server/blob/71f390c3b2396e606b1f151ae2aeec1cd3021a39/Proxmox%20files/.bashrc)
     - Reload .bashrc
       ```
       source ~/.bashrc
