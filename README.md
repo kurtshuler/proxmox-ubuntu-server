@@ -1,12 +1,13 @@
-# Proxmox and Ubuntu VM Installation 
+# Proxmox and Ubuntu VM Installation
+*Contents*
 - [Proxmox and Ubuntu VM Installation](#proxmox-and-ubuntu-vm-installation)
-  - [Proxmox Installation](#proxmox-installation)
-    - [Making a bootable USB with OS images using Ventoy](#making-a-bootable-usb-with-os-images-using-ventoy)
-    - [Proxmox After Install Setup](#proxmox-after-install-setup)
-    - [Proxmox Terminal Setup](#proxmox-terminal-setup)
+- [Proxmox Installation](#proxmox-installation)
+  - [Making a bootable USB with OS images using Ventoy](#making-a-bootable-usb-with-os-images-using-ventoy)
+  - [Proxmox After Install Setup](#proxmox-after-install-setup)
+  - [Proxmox Terminal Setup](#proxmox-terminal-setup)
 
-## Proxmox Installation
-### Making a bootable USB with OS images using Ventoy
+# Proxmox Installation
+## Making a bootable USB with OS images using Ventoy
 1) Latest Ventoy installers at https://sourceforge.net/projects/ventoy/files/ Windows only - use Parallels Windows or Linux
 2) ISO images at:
    | ISO | URL |
@@ -16,7 +17,7 @@
    | Ubuntu SERVER Cloud-Init ISO | https://cloud-images.ubuntu.com/noble/current/ |
    | Ubuntu DESKTOP ISO | https://ubuntu.com/download/desktop/ |
 
-### Proxmox After Install Setup
+## Proxmox After Install Setup
 1) Check that SSH is running
    ```
    systemctl status ssh.service
@@ -50,7 +51,7 @@
    ```
    bash -c "$(wget -qLO - https://github.com/tteck/Proxmox/raw/main/misc/microcode.sh)"
    ```
-### Proxmox Terminal Setup
+## Proxmox Terminal Setup
 5) Install neofetch
    ```
    apt-get install neofetch
