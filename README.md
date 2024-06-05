@@ -57,7 +57,7 @@
    apt-get install neofetch
    ```
 6) Set up Proxmox terminal
-    - Copy-and-paste pve .bashrc
+    - Copy-and-paste [pve .bashrc] (files/Proxmox files/.bashrc "Proxmox .bashrc")
     - Reload .bashrc
       ```
       source ~/.bashrc
