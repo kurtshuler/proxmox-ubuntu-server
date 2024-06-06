@@ -53,7 +53,7 @@ bash -c "$(wget -qLO - https://github.com/tteck/Proxmox/raw/main/misc/microcode.
 apt-get install neofetch
 ```
 3) Set up the Proxmox terminal
-- Copy-and-paste [Proxmox .bashrc](https://github.com/kurtshuler/proxmox-ubuntu-server/blob/71f390c3b2396e606b1f151ae2aeec1cd3021a39/Proxmox%20files/.bashrc)
+- Copy-and-paste [Proxmox .bashrc](/Proxmox%20files/.bashrc)
 - Reload .bashrc
 ```
 source ~/.bashrc
@@ -86,7 +86,7 @@ sudo apt upgrade
 ```
 3) Install basic/required packages
 ```
-sudo apt install ca-certificates curl gnupg lsb-release ntp htop zip unzip gnupg apt-transport-https ca-certificates net-tools ncdu apache2-utils git neofetch
+sudo apt install ca-certificates curl gnupg lsb-release ntp htop zip unzip gnupg apt-transport-https ca-certificates net-tools ncdu apache2-utils git neofetch vsftpd
 ```
 
 4) Change SSH port to 2053
@@ -97,7 +97,8 @@ sudo apt install ca-certificates curl gnupg lsb-release ntp htop zip unzip gnupg
 nano /etc/systemd/system/ssh.socket.d/override.conf
 ```
 - Edit the following lines:
-> **Note:** The blank line *ListenStream=* is required to ensure that port 22 is no longer used. Without this line, the SSH server would then be accessible via port 22 (default) *and* 2053.
+> **Note 1:** These instructions are different than what is on Anand's site due to changes in Ubuntu 24.04 SSH.
+> **Note 2:** The blank line *ListenStream=* is required to ensure that port 22 is no longer used. Without this line, the SSH server would then be accessible via port 22 (default) *and* 2053.
 ```
 [Socket]
 ListenStream=
@@ -126,3 +127,12 @@ ssh root@192.168.1.100 -p 2053
 ```
 ssh kurt@192.168.1.100 -p 2053
 ```
+5) Set up the Ubuntu terminal
+- Copy-and-paste [Ubuntu .bashrc](/Ubuntu-files/.bashrc)
+- Reload .bashrc
+```
+source ~/.bashrc
+```
+4) Install iTerm shell integration: *iTerm2 → Iterm Shell Integration*
+5) Make server tweaks
+   - 
