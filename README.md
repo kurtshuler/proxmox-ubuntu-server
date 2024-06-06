@@ -23,7 +23,8 @@ bash -c "$(wget -qLO - https://github.com/tteck/Proxmox/raw/main/misc/post-pve-i
 - Review iKoolcore R2 wiki at https://wiki.ikoolcore.com/#/R2/en/FAQs/VM
 - Add hardware passthrough https://github.com/KoolCore/Proxmox_VE_Status
 - Read https://www.derekseaman.com/2023/04/proxmox-plex-lxc-with-alder-lake-transcoding.html
-4) Verify that hardware passthrough is working: https://pve.proxmox.com/wiki/PCI_Passthrough
+4) Verify that hardware passthrough is working
+Source: https://pve.proxmox.com/wiki/PCI_Passthrough
 - Verify IOMMU is enabled:
 ```
 dmesg | grep -e DMAR -e IOMMU
@@ -41,7 +42,7 @@ lspci -v | grep -e VGA
 ```
 lspci -v -s 00:02.0
 ```
-5) Run TTeck Proxmox VE Processor Microcode script at https://helper-scripts.com/scripts?id=Proxmox+VE+Processor+Microcode
+1) Run TTeck Proxmox VE Processor Microcode script at https://helper-scripts.com/scripts?id=Proxmox+VE+Processor+Microcode
 > Run Tteck scripts from Proxmox GUI shell, not SSH!
 ```
 bash -c "$(wget -qLO - https://github.com/tteck/Proxmox/raw/main/misc/microcode.sh)"
@@ -51,26 +52,27 @@ bash -c "$(wget -qLO - https://github.com/tteck/Proxmox/raw/main/misc/microcode.
 ```
 apt-get install neofetch
 ```
-2) Set up the Proxmox terminal
+1) Set up the Proxmox terminal
 - Copy-and-paste [Proxmox .bashrc](https://github.com/kurtshuler/proxmox-ubuntu-server/blob/71f390c3b2396e606b1f151ae2aeec1cd3021a39/Proxmox%20files/.bashrc)
 - Reload .bashrc
 ```
 source ~/.bashrc
 ```
-3) Install iTerm shell integration: *iTerm2 → Iterm Shell Integration*
+1) Install iTerm shell integration: *iTerm2 → Iterm Shell Integration*
 ## Ubuntu installation within Proxmox 
-### Install Ubuntu using Tteck sctipt
+### Install Ubuntu using Tteck script
 1) Run Tteck Ubuntu 24.04 script at https://helper-scripts.com/scripts?id=Ubuntu+24.04
 > Run TTeck scripts from Proxmox GUI shell, not SSH!
 ```
 bash -c "$(wget -qLO - https://github.com/tteck/Proxmox/raw/main/vm/ubuntu2404-vm.sh)"
-
 ```
-2) Setup Cloud-Int on Proxmox
+1) Setup Cloud-Int on Proxmox
+
 Info at https://github.com/tteck/Proxmox/discussions/2072 
 
-### Follow Anand's OS setup guide
-Go to [Ultimate Docker Server: Getting Started with OS Preparation Part 1](https://www.smarthomebeginner.com/ultimate-docker-server-1-os-preparation/). 
+### Ubuntu OS setup
+    
+This is based on Anand's OS setup guide at [Ultimate Docker Server: Getting Started with OS Preparation Part 1](https://www.smarthomebeginner.com/ultimate-docker-server-1-os-preparation/). 
 >The steps below are adapted from this guide to match Ubuntu 24.04 requirements.
 1) Create new user and give sudo priveleges
 ```
@@ -88,12 +90,13 @@ sudo apt install ca-certificates curl gnupg lsb-release ntp htop zip unzip gnupg
 ```
 
 4) Change SSH port to 2053
-To change the port of the SSH server, the systemd configuration for ssh.socket must be changed or supplemented. The configuration adjustment is made by creating a *.conf file in the directory /etc/systemd/system/ssh.socket.d/.
-- Create conf file to extend the default config:
+
+    To change the port of the SSH server, the systemd configuration for ssh.socket must be changed or supplemented. The configuration adjustment is made by creating a *.conf file in the directory /etc/systemd/system/ssh.socket.d/.
+- Edit conf file to extend the default config:
 ```
 nano /etc/systemd/system/ssh.socket.d/override.conf
 ```
-- Add the following lines:
+- Edit the following lines:
 > **Note:** The blank line *ListenStream=* is required to ensure that port 22 is no longer used. Without this line, the SSH server would then be accessible via port 22 (default) *and* 2053.
 ```
 [Socket]
