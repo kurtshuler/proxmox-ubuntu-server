@@ -73,8 +73,8 @@ Go to [Ultimate Docker Server: Getting Started with OS Preparation Part 1](https
 >The steps below are adapted from this guide to match Ubuntu 24.04 requirements.
 1) Create new user and give sudo priveleges
    ```
-   adduser kurtshuler
-   adduser kurtshuler sudo
+   adduser kurt
+   adduser kurt sudo
    ```
 2) Update Ubuntu OS
    ```
