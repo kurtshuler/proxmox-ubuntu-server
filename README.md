@@ -128,7 +128,7 @@ ssh root@192.168.1.100 -p 2053
 ssh kurt@192.168.1.100 -p 2053
 ```
 5) Set up the Ubuntu terminal
-- Copy-and-paste [Ubuntu .bashrc](/Ubuntu-files/.bashrc)
+- Copy-and-paste [Ubuntu .bashrc](/Ubuntu%20files/.bashrc)
 - Reload .bashrc
 ```
 source ~/.bashrc
