@@ -42,23 +42,23 @@ lspci -v | grep -e VGA
 ```
 lspci -v -s 00:02.0
 ```
-1) Run TTeck Proxmox VE Processor Microcode script at https://helper-scripts.com/scripts?id=Proxmox+VE+Processor+Microcode
+5) Run TTeck Proxmox VE Processor Microcode script at https://helper-scripts.com/scripts?id=Proxmox+VE+Processor+Microcode
 > Run Tteck scripts from Proxmox GUI shell, not SSH!
 ```
 bash -c "$(wget -qLO - https://github.com/tteck/Proxmox/raw/main/misc/microcode.sh)"
 ```
 ### Proxmox terminal setup
-1) Install neofetch
+2) Install neofetch
 ```
 apt-get install neofetch
 ```
-1) Set up the Proxmox terminal
+3) Set up the Proxmox terminal
 - Copy-and-paste [Proxmox .bashrc](https://github.com/kurtshuler/proxmox-ubuntu-server/blob/71f390c3b2396e606b1f151ae2aeec1cd3021a39/Proxmox%20files/.bashrc)
 - Reload .bashrc
 ```
 source ~/.bashrc
 ```
-1) Install iTerm shell integration: *iTerm2 → Iterm Shell Integration*
+4) Install iTerm shell integration: *iTerm2 → Iterm Shell Integration*
 ## Ubuntu installation within Proxmox 
 ### Install Ubuntu using Tteck script
 1) Run Tteck Ubuntu 24.04 script at https://helper-scripts.com/scripts?id=Ubuntu+24.04
@@ -66,7 +66,7 @@ source ~/.bashrc
 ```
 bash -c "$(wget -qLO - https://github.com/tteck/Proxmox/raw/main/vm/ubuntu2404-vm.sh)"
 ```
-1) Setup Cloud-Int on Proxmox
+5) Setup Cloud-Int on Proxmox
 
 Info at https://github.com/tteck/Proxmox/discussions/2072 
 
