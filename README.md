@@ -16,7 +16,7 @@ systemctl status ssh.service
 ```
 2) Run TTeck Proxmox VE Helper-Scripts at https://helper-scripts.com/scripts?id=Proxmox+VE+Post+Install
 > Run Tteck scripts from Proxmox GUI shell, not SSH!
-```
+```shell-script
 bash -c "$(wget -qLO - https://github.com/tteck/Proxmox/raw/main/misc/post-pve-install.sh)"
 ```
 3) Set up Hardware Passthrough (iGPU):
@@ -26,7 +26,7 @@ bash -c "$(wget -qLO - https://github.com/tteck/Proxmox/raw/main/misc/post-pve-i
 4) Verify that hardware passthrough is working
 Source: https://pve.proxmox.com/wiki/PCI_Passthrough
 - Verify IOMMU is enabled:
-```
+```shell-script
 dmesg | grep -e DMAR -e IOMMU
 ```
 - Verify IOMMU interrupt remapping is enabled:
