@@ -1,5 +1,5 @@
 # Set up Proxmox and Ubuntu 24.04 VM from scratch
-----
+
 ## Make a bootable USB with OS images and tools using Ventoy
 1. Latest Ventoy installers at https://sourceforge.net/projects/ventoy/files/ Windows only - use Parallels Windows or Linux
 2. ISO images at:
@@ -9,7 +9,7 @@
    | Proxmox ISO | https://www.proxmox.com/en/downloads |
    | Ubuntu SERVER Cloud-Init ISO | https://cloud-images.ubuntu.com/noble/current/ |
    | Ubuntu DESKTOP ISO | https://ubuntu.com/download/desktop/ |
-----
+
 ## Proxmox post-install setup
 ### Check that SSH is running
 ```shell-script
@@ -48,7 +48,7 @@ lspci -v -s 00:02.0
 ```shell-script
 bash -c "$(wget -qLO - https://github.com/tteck/Proxmox/raw/main/misc/microcode.sh)"
 ```
-----
+
 ## Proxmox terminal setup
 ### Install neofetch
 ```shell-script
@@ -62,7 +62,6 @@ source ~/.bashrc
 ```
 ### Install iTerm shell integration: *iTerm2 → Iterm Shell Integration*
 
-----
 ## Ubuntu installation within Proxmox 
 
 ### Install Ubuntu using Tteck script
@@ -74,10 +73,8 @@ bash -c "$(wget -qLO - https://github.com/tteck/Proxmox/raw/main/vm/ubuntu2404-v
 ```
 
 ### Setup Cloud-Int on Proxmox
-
 Info at https://github.com/tteck/Proxmox/discussions/2072 
 
-----
 ## Ubuntu OS setup
     
 This is based on Anand's OS setup guide at [Ultimate Docker Server: Getting Started with OS Preparation Part 1](https://www.smarthomebeginner.com/ultimate-docker-server-1-os-preparation/). 
@@ -134,14 +131,14 @@ ssh root@192.168.1.100 -p 2053
 ```shell
 ssh kurt@192.168.1.100 -p 2053
 ```
-----
+
 ## Set up the Ubuntu terminal
 - Copy-and-paste [Ubuntu .bashrc](/Ubuntu%20files/.bashrc)
 - Reload .bashrc
 ```shell
 source ~/.bashrc
 ```
-### Install iTerm shell integration: *iTerm2 → Iterm Shell Integration*
-----
+- Install iTerm shell integration: *iTerm2 → Iterm Shell Integration*
+
 ##  Make server tweaks
    - 
