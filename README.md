@@ -137,14 +137,16 @@ ssh kurt@192.168.1.100 -p 2053
 ```shell
 bash -c "$(curl -fsSL https://raw.githubusercontent.com/ohmybash/oh-my-bash/master/tools/install.sh)"
 ```
-### Reload .bashrc
+### Reload `.bashrc`
 ```shell
 source ~/.bashrc
 ```
-### Use Filezilla to transfer Ubuntu `.bashrc` file to server
-- Copy-and-paste [Ubuntu `.bashrc`](/Ubuntu%20files/.bashrc)
-
-- Install iTerm shell integration: `*iTerm2 → Iterm Shell Integration*`
+### Use Filezilla to transfer Ubuntu [`.bashrc`](/Ubuntu%20files/.bashrc) file to server
+### Reload `.bashrc`, again
+```shell
+source ~/.bashrc
+```
+### Install iTerm shell integration: `*iTerm2 → Iterm Shell Integration*`
 
 ##  Make server tweaks
    - 
