@@ -31,31 +31,31 @@ dmesg | grep -e DMAR -e IOMMU
 ```
 - Verify IOMMU interrupt remapping is enabled:
 
-```
+```shell-script
 dmesg | grep 'remapping'
 ```
 - Verify that Proxmox recognizes the GPU:
-```
+```shell-script
 lspci -v | grep -e VGA
 ```
 - Get more details about that VGA adapter:
-```
+```shell-script
 lspci -v -s 00:02.0
 ```
 5) Run TTeck Proxmox VE Processor Microcode script at https://helper-scripts.com/scripts?id=Proxmox+VE+Processor+Microcode
 > Run Tteck scripts from Proxmox GUI shell, not SSH!
-```
+```shell-script
 bash -c "$(wget -qLO - https://github.com/tteck/Proxmox/raw/main/misc/microcode.sh)"
 ```
 ### Proxmox terminal setup
 2) Install neofetch
-```
+```shell-script
 apt-get install neofetch
 ```
 3) Set up the Proxmox terminal
 - Copy-and-paste [Proxmox .bashrc](/Proxmox%20files/.bashrc)
 - Reload .bashrc
-```
+```shell-script
 source ~/.bashrc
 ```
 4) Install iTerm shell integration: *iTerm2 → Iterm Shell Integration*
@@ -63,7 +63,7 @@ source ~/.bashrc
 ### Install Ubuntu using Tteck script
 1) Run Tteck Ubuntu 24.04 script at https://helper-scripts.com/scripts?id=Ubuntu+24.04
 > Run TTeck scripts from Proxmox GUI shell, not SSH!
-```
+```shell-script
 bash -c "$(wget -qLO - https://github.com/tteck/Proxmox/raw/main/vm/ubuntu2404-vm.sh)"
 ```
 5) Setup Cloud-Int on Proxmox
@@ -75,17 +75,17 @@ Info at https://github.com/tteck/Proxmox/discussions/2072
 This is based on Anand's OS setup guide at [Ultimate Docker Server: Getting Started with OS Preparation Part 1](https://www.smarthomebeginner.com/ultimate-docker-server-1-os-preparation/). 
 >The steps below are adapted from this guide to match Ubuntu 24.04 requirements.
 1) Create new user and give sudo priveleges
-```
+```shell-script
 adduser kurt
 adduser kurt sudo
 ```
 2) Update Ubuntu OS
-```
+```shell-script
 sudo apt update
 sudo apt upgrade
 ```
 3) Install basic/required packages
-```
+```shell-script
 sudo apt install ca-certificates curl gnupg lsb-release ntp htop zip unzip gnupg apt-transport-https ca-certificates net-tools ncdu apache2-utils git neofetch vsftpd
 ```
 
@@ -93,7 +93,7 @@ sudo apt install ca-certificates curl gnupg lsb-release ntp htop zip unzip gnupg
 
     To change the port of the SSH server, the systemd configuration for ssh.socket must be changed or supplemented. The configuration adjustment is made by creating a *.conf file in the directory /etc/systemd/system/ssh.socket.d/.
 - Edit conf file to extend the default config:
-```
+```shell-script
 nano /etc/systemd/system/ssh.socket.d/override.conf
 ```
 - Edit the following lines:
@@ -105,32 +105,32 @@ ListenStream=
 ListenStream=2053
 ```
 - Restart SSH:
-```
+```shell-script
 systemctl daemon-reload
 sudo systemctl restart ssh  
 ```
 - Ensure that port 22 is *closed* and port 2053 is *open*:
-```
+```shell-script
 netstat -ant |grep 2053
 ```
-```
+```shell-script
 sudo lsof -nP -iTCP -sTCP:LISTEN
 ```
-```
+```shell-script
 sudo netstat -tunpl
 ```
 - SSH *root* check: Log into Ubuntu server using new SSH port 2053
-```
+```shell-script
 ssh root@192.168.1.100 -p 2053
 ```
 - SSH *user* check: Log into Ubuntu server using new SSH port 2053
-```
+```shell-script
 ssh kurt@192.168.1.100 -p 2053
 ```
 5) Set up the Ubuntu terminal
 - Copy-and-paste [Ubuntu .bashrc](/Ubuntu%20files/.bashrc)
 - Reload .bashrc
-```
+```shell-script
 source ~/.bashrc
 ```
 4) Install iTerm shell integration: *iTerm2 → Iterm Shell Integration*
