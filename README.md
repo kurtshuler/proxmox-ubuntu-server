@@ -99,19 +99,19 @@ nano /etc/systemd/system/ssh.socket.d/override.conf
 - Edit the following lines:
 > **Note 1:** These instructions are different than what is on Anand's site due to changes in Ubuntu 24.04 SSH.
 > **Note 2:** The blank line *ListenStream=* is required to ensure that port 22 is no longer used. Without this line, the SSH server would then be accessible via port 22 (default) *and* 2053.
-```
+```EditorConfig
 [Socket]
 ListenStream=
 ListenStream=2053
 ```
 - Restart SSH:
-```shell-script
+```shell
 systemctl daemon-reload
 sudo systemctl restart ssh  
 ```
 - Ensure that port 22 is *closed* and port 2053 is *open*:
-```shell-script
-netstat -ant |grep 2053
+```sh
+netstat -ant | grep 2053
 ```
 ```shell-script
 sudo lsof -nP -iTCP -sTCP:LISTEN
@@ -124,13 +124,13 @@ sudo netstat -tunpl
 ssh root@192.168.1.100 -p 2053
 ```
 - SSH *user* check: Log into Ubuntu server using new SSH port 2053
-```shell-script
+```shell
 ssh kurt@192.168.1.100 -p 2053
 ```
 5) Set up the Ubuntu terminal
 - Copy-and-paste [Ubuntu .bashrc](/Ubuntu%20files/.bashrc)
 - Reload .bashrc
-```shell-script
+```shell
 source ~/.bashrc
 ```
 4) Install iTerm shell integration: *iTerm2 → Iterm Shell Integration*
