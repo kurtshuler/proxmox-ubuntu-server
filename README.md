@@ -11,7 +11,7 @@
 ## Proxmox installation
 ### Proxmox post-install setup
 1) Check that SSH is running
-```console
+```shell-script
 systemctl status ssh.service
 ```
 2) Run TTeck Proxmox VE Helper-Scripts at https://helper-scripts.com/scripts?id=Proxmox+VE+Post+Install
