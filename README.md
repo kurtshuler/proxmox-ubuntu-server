@@ -146,6 +146,13 @@ source ~/.bashrc
 ```shell
 source ~/.bashrc
 ```
+> If error loading OMB, set proper OMB location in `.bashrc` (depends on whether installed by `root` or `kurt` account:
+> ```shell
+> export OSH='/root/.oh-my-bash'
+> ```
+> ```shell
+> export OSH='/home/kurt/.oh-my-bash'
+> ```
 ### Install iTerm shell integration: `*iTerm2 → Iterm Shell Integration*`
 
 ##  Make server tweaks
