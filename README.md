@@ -11,7 +11,7 @@
    | Ubuntu DESKTOP ISO | https://ubuntu.com/download/desktop/ |
 
 ## Proxmox post-install setup
-### Check that SSH is running
+#### Check that SSH is running
 ```shell-script
 systemctl status ssh.service
 ```
