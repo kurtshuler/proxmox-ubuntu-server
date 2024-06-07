@@ -85,7 +85,7 @@ source ~/.bashrc
 > ```shell
 > export OSH='/root/.oh-my-bash'
 > ```
-### Add aliases to `.bashrc`
+### Add bash aliases, OMS plugins and OMB completions to `.bashrc`
 Edit `.bashrc` by copying and comparing to GitHub Ubuntu [`.bashrc`](/Ubuntu%20files/.bashrc)
 Be sure to copy over [Anand's bash aliases](https://github.com/htpcBeginner/docker-traefik/blob/master/shared/config/bash_aliases)
 ```shell
