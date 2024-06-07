@@ -40,8 +40,8 @@ Edit `override.conf` file to extend the default config:
 nano /etc/systemd/system/ssh.socket.d/override.conf
 ```
 Edit the following lines:
-> **Note 1:** These instructions are different than what is on Anand's site due to changes in Ubuntu 24.04 SSH.
-> **Note 2:** The blank line `ListenStream=` is required to ensure that port 22 is no longer used. Without this line, the SSH server would then be accessible via port 22 (default) *and* 2053.
+> **NOTE 1:** These instructions are different than what is on Anand's site due to changes in Ubuntu 24.04 SSH.
+> **NOTE 2:** The blank line `ListenStream=` is required to ensure that port 22 is no longer used. Without this line, the SSH server would then be accessible via port 22 (default) *and* 2053.
 ```EditorConfig
 [Socket]
 ListenStream=
