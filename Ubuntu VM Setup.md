@@ -7,9 +7,9 @@ Run Tteck Ubuntu 24.04 script at https://helper-scripts.com/scripts?id=Ubuntu+24
 ```shell-script
 bash -c "$(wget -qLO - https://github.com/tteck/Proxmox/raw/main/vm/ubuntu2404-vm.sh)"
 ```
+> WARNING: Do NOT start the VM until after you do the following Cloud-Init setup step!
+Setup Cloud-Init on Proxmox
 
-Setup Cloud-Int on Proxmox
-> WARNING: Do NOT start the VM until after you do this step!
 - Info at https://github.com/tteck/Proxmox/discussions/2072 
 
 Start the VM
@@ -40,8 +40,9 @@ Edit `override.conf` file to extend the default config:
 nano /etc/systemd/system/ssh.socket.d/override.conf
 ```
 Edit the following lines:
-> **NOTE 1:** These instructions are different than what is on Anand's site due to changes in Ubuntu 24.04 SSH.
-> **NOTE 2:** The blank line `ListenStream=` is required to ensure that port 22 is no longer used. Without this line, the SSH server would then be accessible via port 22 (default) *and* 2053.
+> NOTE 1: These instructions are different than what is on Anand's site due to changes in Ubuntu 24.04 SSH.
+> 
+> NOTE 2: The blank line `ListenStream=` is required to ensure that port 22 is no longer used. Without this line, the SSH server would then be accessible via port 22 (default) *and* 2053.
 ```EditorConfig
 [Socket]
 ListenStream=
@@ -76,24 +77,27 @@ ssh kurt@192.168.1.100 -p 2053
 ```shell
 bash -c "$(curl -fsSL https://raw.githubusercontent.com/ohmybash/oh-my-bash/master/tools/install.sh)"
 ```
-### Reload `.bashrc`
+Reload `.bashrc`
 ```shell
 source ~/.bashrc
 ```
-### Use Filezilla to transfer Ubuntu [`.bashrc`](/Ubuntu%20files/.bashrc) file to server
-### Reload `.bashrc`, again
-```shell
-source ~/.bashrc
-```
-> If error loading OMB, set proper OMB location in `.bashrc` (depends on whether installed by `root` or `kurt` account:
+> If error loading OMB, set proper OMB file location in `.bashrc`
 > ```shell
 > export OSH='/root/.oh-my-bash'
 > ```
-> ```shell
-> export OSH='/home/kurt/.oh-my-bash'
-> ```
-### Install iTerm shell integration: `*iTerm2 → Iterm Shell Integration*`
+### Add aliases to `.bashrc`
+Edit `.bashrc` by copying and comparing to GitHub Ubuntu [`.bashrc`](/Ubuntu%20files/.bashrc)
+Be sure to copy over [Anand's bash aliases](https://github.com/htpcBeginner/docker-traefik/blob/master/shared/config/bash_aliases)
+```shell
+nano .bashrc
+```
+Reload `.bashrc`
+```shell
+source ~/.bashrc
+```
+### Install iTerm shell integration
+In iTerm 2 GUI, click on `iTerm2 → Iterm Shell Integration`
 
 ##  Make server tweaks
    - 
-
+----------
