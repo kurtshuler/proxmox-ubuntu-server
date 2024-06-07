@@ -48,22 +48,31 @@ lspci -v -s 00:02.0
 ```
 
 ### Run TTeck Proxmox VE Processor Microcode script at https://helper-scripts.com/scripts?id=Proxmox+VE+Processor+Microcode
-> Run Tteck scripts from Proxmox GUI shell, not SSH!
+> Run Tteck scripts from Proxmox *GUI* shell, not SSH!
 ```shell-script
 bash -c "$(wget -qLO - https://github.com/tteck/Proxmox/raw/main/misc/microcode.sh)"
 ```
 
-## Proxmox terminal setup
-
-### Install neofetch
-```shell-script
-apt-get install neofetch
+## Set up the Proxom terminal
+### Install Oh My Bash
+```shell
+bash -c "$(curl -fsSL https://raw.githubusercontent.com/ohmybash/oh-my-bash/master/tools/install.sh)"
 ```
-
-### Set up the Proxmox terminal
-- Copy-and-paste [Proxmox .bashrc](/Proxmox%20files/.bashrc)
-- Reload .bashrc
-```shell-script
+### Reload `.bashrc`
+```shell
 source ~/.bashrc
 ```
-### Install iTerm shell integration: *iTerm2 → Iterm Shell Integration*
+### Edit `.bashrc` by copying and comparing to GitHub Proxmox [`.bashrc`](/Proxmox%20files/.bashrc)
+### Reload `.bashrc`, again
+```shell
+nano .bashrc
+```
+> If error loading OMB, set proper OMB location in `.bashrc`
+> ```shell
+> export OSH='/root/.oh-my-bash'
+> ```
+### Install iTerm shell integration:
+In iTerm 2 GUI, click on `iTerm2 → Iterm Shell Integration`
+
+-----
+
