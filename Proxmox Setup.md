@@ -53,21 +53,24 @@ lspci -v -s 00:02.0
 bash -c "$(wget -qLO - https://github.com/tteck/Proxmox/raw/main/misc/microcode.sh)"
 ```
 
-## Set up the Proxom terminal
+## Set up the Proxmox terminal
 ### Install Oh My Bash
 ```shell
 bash -c "$(curl -fsSL https://raw.githubusercontent.com/ohmybash/oh-my-bash/master/tools/install.sh)"
 ```
-### Reload `.bashrc`
+Reload `.bashrc`
 ```shell
 source ~/.bashrc
 ```
-### Edit `.bashrc` by copying and comparing to GitHub Proxmox [`.bashrc`](/Proxmox%20files/.bashrc)
-### Reload `.bashrc`, again
+Edit `.bashrc` by copying and comparing to GitHub Proxmox [`.bashrc`](/Proxmox%20files/.bashrc)
 ```shell
 nano .bashrc
 ```
-> If error loading OMB, set proper OMB location in `.bashrc`
+Reload `.bashrc`
+```shell
+source ~/.bashrc
+```
+> If error loading OMB, set proper OMB file location in `.bashrc`
 > ```shell
 > export OSH='/root/.oh-my-bash'
 > ```
