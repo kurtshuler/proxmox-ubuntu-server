@@ -62,6 +62,11 @@ Reload `.bashrc`
 ```shell
 source ~/.bashrc
 ```
+> If error loading OMB, set proper OMB file location in `.bashrc`
+> ```shell
+> export OSH='/root/.oh-my-bash'
+> ```
+### Add plugins and completions to `.bashrc`
 Edit `.bashrc` by copying and comparing to GitHub Proxmox [`.bashrc`](/Proxmox%20files/.bashrc)
 ```shell
 nano .bashrc
@@ -70,10 +75,7 @@ Reload `.bashrc`
 ```shell
 source ~/.bashrc
 ```
-> If error loading OMB, set proper OMB file location in `.bashrc`
-> ```shell
-> export OSH='/root/.oh-my-bash'
-> ```
+
 ### Install iTerm shell integration:
 In iTerm 2 GUI, click on `iTerm2 → Iterm Shell Integration`
 
