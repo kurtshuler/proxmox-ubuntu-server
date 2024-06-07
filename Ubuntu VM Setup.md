@@ -99,5 +99,36 @@ source ~/.bashrc
 In iTerm 2 GUI, click on `iTerm2 → Iterm Shell Integration`
 
 ##  Make server tweaks
-   - 
+> NOTE: This is based on Anand's OS setup guide at [Ultimate Docker Server: Getting Started with OS Preparation Part 1](https://www.smarthomebeginner.com/ultimate-docker-server-1-os-preparation/).
+
+System configuration tweaks to enhance the performance and handling of large list of files (e.g. Plex/Jellyfin metadata). 
+
+Edit `/etc/sysctl.conf` using the following command:
+
+```shell
+sudo nano /etc/sysctl.conf
+```
+
+Add the following 3 lines at the end of the file:
+```shell
+vm.swappiness=10
+vm.vfs_cache_pressure = 50
+fs.inotify.max_user_watches=262144
+```
+## Enable UFW firewall
+Apply UFW settings:
+```shell
+sudo ufw default deny incoming
+sudo ufw default allow outgoing
+sudo ufw allow from 192.168.1.0/24
+```
+Activate UFW using the command:
+
+```shell
+sudo ufw enable
+```
+Check  UFW status
+```shell
+sudo ufw status
+```
 ----------
