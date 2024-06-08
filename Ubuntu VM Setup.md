@@ -121,6 +121,8 @@ Apply UFW settings:
 sudo ufw default deny incoming
 sudo ufw default allow outgoing
 sudo ufw allow from 192.168.1.0/24
+sudo ufw allow 80
+sudo ufw allow 443
 ```
 Activate UFW using the command:
 
