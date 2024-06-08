@@ -188,6 +188,6 @@ postfix reload
 ```
 Send another  test email
 ```shell
-echo "This is a second test message sent from postfix on my Proxmox Server" | mail -s "Second Test Email from Proxmox" shulerpve1@gmail.com@gmail.com
+echo "This is a second test message sent from postfix on my Proxmox Server" | mail -s "Second Test Email from Proxmox" shulerpve1@gmail.com
 ```
 ---------------
