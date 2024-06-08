@@ -60,6 +60,7 @@ lspci -v -s 00:02.0
 ```shell-script
 bash -c "$(wget -qLO - https://github.com/tteck/Proxmox/raw/main/misc/microcode.sh)"
 ```
+Reboot.
 
 ## Set up the Proxmox terminal
 ### Install Oh My Bash
