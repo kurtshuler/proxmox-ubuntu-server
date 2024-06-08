@@ -11,7 +11,7 @@ bash -c "$(wget -qLO - https://github.com/tteck/Proxmox/raw/main/vm/ubuntu2404-v
 > WARNING: Do NOT start the VM until after you do the following Cloud-Init setup step!
 
 
-- Info at https://github.com/tteck/Proxmox/discussions/2072 
+**Follow the detailed instructions at** https://github.com/tteck/Proxmox/discussions/2072 
 
 ### Start the VM
 ----
