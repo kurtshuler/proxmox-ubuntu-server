@@ -63,6 +63,10 @@ bash -c "$(wget -qLO - https://github.com/tteck/Proxmox/raw/main/misc/microcode.
 Reboot.
 
 ## Set up the Proxmox terminal
+###Install neofetch
+```shell
+sudo apt install neofetch
+```
 ### Install Oh My Bash
 ```shell
 bash -c "$(curl -fsSL https://raw.githubusercontent.com/ohmybash/oh-my-bash/master/tools/install.sh)"
