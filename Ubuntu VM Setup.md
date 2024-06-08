@@ -2,17 +2,18 @@
 
 ## Install Ubuntu VM within Proxmox PVE GUI shell
 
-Run Tteck Ubuntu 24.04 script at https://helper-scripts.com/scripts?id=Ubuntu+24.04
+### Run Tteck Ubuntu 24.04 script at https://helper-scripts.com/scripts?id=Ubuntu+24.04
 > NOTE: Run TTeck scripts from Proxmox GUI shell, not SSH!
 ```shell-script
 bash -c "$(wget -qLO - https://github.com/tteck/Proxmox/raw/main/vm/ubuntu2404-vm.sh)"
 ```
+### Setup Cloud-Init on Proxmox
 > WARNING: Do NOT start the VM until after you do the following Cloud-Init setup step!
-Setup Cloud-Init on Proxmox
+
 
 - Info at https://github.com/tteck/Proxmox/discussions/2072 
 
-Start the VM
+### Start the VM
 ## Ubuntu OS setup
     
 > NOTE: This is based on Anand's OS setup guide at [Ultimate Docker Server: Getting Started with OS Preparation Part 1](https://www.smarthomebeginner.com/ultimate-docker-server-1-os-preparation/). 
