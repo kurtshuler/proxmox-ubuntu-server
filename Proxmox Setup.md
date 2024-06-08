@@ -149,7 +149,7 @@ postfix reload
 ```
 Send a test email
 ```shell
-echo "This is a test message sent from postfix on my Proxmox Server" | mail -s "Test Email from Proxmox" shulerpve1@gmail.com@gmail.com
+echo "This is a test message sent from postfix on my Proxmox Server" | mail -s "Test Email from Proxmox" shulerpve1@gmail.com
 ```
 ### Fix the "from" name in email
 
