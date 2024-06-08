@@ -126,7 +126,11 @@ Edit postfix config
 ```shell
 nano /etc/postfix/main.cf
 ```
-Change/add this text
+Comment out line 26
+```shell
+### relayhost =
+```
+Add this text at end of file
 ```shell
 # google mail configuration
 
