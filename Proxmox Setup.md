@@ -63,7 +63,7 @@ bash -c "$(wget -qLO - https://github.com/tteck/Proxmox/raw/main/misc/microcode.
 Reboot.
 
 ## Set up the Proxmox terminal
-###Install neofetch
+### Install neofetch
 ```shell
 sudo apt install neofetch
 ```
