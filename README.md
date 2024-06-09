@@ -7,4 +7,4 @@ Here is a summary of the contents with direct links to the markdown docs in this
   - [Make a bootable USB with OS images and tools using Ventoy](1%20-%20Proxmox%20Setup.md/#make-a-bootable-usb-with-os-images-and-tools-using-ventoy)
   - [Proxmox post-install setup](1%20-%20Proxmox%20Setup.md/#proxmox-post-install-setup)
   - [Set up the Proxmox terminal](1%20-%20Proxmox%20Setup.md/#set-up-the-proxmox-terminal)
-  - [Configure Proxmox alerts](https://github.com/kurtshuler/proxmox-ubuntu-server/blob/main/1%20-%20Proxmox%20Setup.md/#configure-proxmox-alerts))
+  - [Configure Proxmox alerts](https://github.com/kurtshuler/proxmox-ubuntu-server/blob/main/1%20-%20Proxmox%20Setup.md/#configure-proxmox-alerts)
