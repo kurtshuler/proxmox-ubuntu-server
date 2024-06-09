@@ -44,7 +44,7 @@
    cd /mnt/crucial
    ls -al
    ```
-## Within the VM:  Set up `fstab` so passed-through drive will mount on boot
+## Within the VM:  Set up `fstab` so the passed-through drive will mount on boot
 1. Edit the `fstab` file
    ```sh
    sudo nano /etc/fstab
