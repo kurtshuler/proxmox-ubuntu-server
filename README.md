@@ -3,7 +3,7 @@ This repository describes how to build a Proxmox server from scratch and create 
 
 Here is a summary of the contents with direct links to the markdown docs in this repository:
 
-1 - [Set up Proxmox from scratch](proxmox-ubuntu-server/1-proxmox-setup)
+1 - [Set up Proxmox from scratch](proxmox-ubuntu-server/1%20-%20Proxmox%20Setup.md)
   - [Make a bootable USB with OS images and tools using Ventoy](#make-a-bootable-usb-with-os-images-and-tools-using-ventoy)
   - [Proxmox post-install setup](#proxmox-post-install-setup)
   - [Set up the Proxmox terminal](#set-up-the-proxmox-terminal)
