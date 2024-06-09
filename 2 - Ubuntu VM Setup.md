@@ -8,7 +8,7 @@
 bash -c "$(wget -qLO - https://github.com/tteck/Proxmox/raw/main/vm/ubuntu2404-vm.sh)"
 ```
 ### Setup Cloud-Init on Proxmox
-> WARNING: Do NOT start the VM until after you do the following Cloud-Init setup step!
+> WARNING: Do NOT start the VM until after you do the following Cloud-Init setup steps!
 
 
 **Follow the detailed instructions at** https://github.com/tteck/Proxmox/discussions/2072 
