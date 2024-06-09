@@ -97,9 +97,9 @@ sudo nano /etc/sysctl.conf
 ```
 
 Add the following 3 lines at the end of the file:
-```shell
+```EditorConfig
 vm.swappiness=10
-vm.vfs_cache_pressure = 50
+vm.vfs_cache_pressure=50
 fs.inotify.max_user_watches=262144
 ```
 ## Enable UFW firewall
