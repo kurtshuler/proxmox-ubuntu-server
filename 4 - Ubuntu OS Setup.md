@@ -6,7 +6,7 @@
   - [Set up the Ubuntu terminal](#set-up-the-ubuntu-terminal)
   - [Make server tweaks](#make-server-tweaks)
   - [Enable UFW firewall](#enable-ufw-firewall)
-    
+----    
 
 
 ## Initial Setup
