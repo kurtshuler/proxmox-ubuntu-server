@@ -15,7 +15,7 @@ sudo apt upgrade
 ```
 ## Install basic/required packages
 ```shell-script
-sudo apt install ca-certificates curl gnupg lsb-release ntp htop zip unzip gnupg apt-transport-https ca-certificates net-tools ncdu apache2-utils git neofetch vsftpd
+sudo apt install ca-certificates curl gnupg lsb-release ntp htop zip unzip gnupg apt-transport-https ca-certificates net-tools ncdu apache2-utils git neofetch vsftpd mc
 ```
 ## Change SSH port to 2053
 
