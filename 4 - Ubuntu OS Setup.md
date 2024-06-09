@@ -1,19 +1,28 @@
-# Ubuntu OS setup
+# 4 - Ubuntu OS setup
+
+## Contents
+  - [Initial Setup](#initial-setup)
+  - [Change SSH port to 2053](#change-ssh-port-to-2053)
+  - [Set up the Ubuntu terminal](#set-up-the-ubuntu-terminal)
+  - [Make server tweaks](#make-server-tweaks)
+  - [Enable UFW firewall](#enable-ufw-firewall)
     
+
+
+## Initial Setup
 > NOTE: These steps are based on Anand's OS setup guide at [Ultimate Docker Server: Getting Started with OS Preparation Part 1](https://www.smarthomebeginner.com/ultimate-docker-server-1-os-preparation/). 
 >The steps below are adapted from this guide to match Ubuntu 24.04 SSH requirements.
-
-## Create new user and give sudo priveleges
+### Create new user and give sudo priveleges
 ```shell-script
 adduser kurt
 adduser kurt sudo
 ```
-## Update Ubuntu OS
+### Update Ubuntu OS
 ```shell-script
 sudo apt update
 sudo apt upgrade
 ```
-## Install basic/required packages
+### Install basic/required packages
 ```shell-script
 sudo apt install ca-certificates curl gnupg lsb-release ntp htop zip unzip gnupg apt-transport-https ca-certificates net-tools ncdu apache2-utils git neofetch vsftpd mc
 ```
