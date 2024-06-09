@@ -11,5 +11,5 @@ Here is a summary of the contents with direct links to the markdown docs in this
 ## [2 - Ubuntu VM Setup](2%20-%20Ubuntu%20VM%20Setup.md)
 ## [3 - USB Drive Passthrough to Proxmox VM](3%20-%20USB%20%20Drive%20Passthrough%20to%20Proxmox%20VM.md)
   - [Within Proxmox Node: Pass through from Proxmox node to VM](3%20-%20USB%20%20Drive%20Passthrough%20to%20Proxmox%20VM.md#within-proxmox-node-psss-through-from-proxmox-node-to-vm)
-- Within the VM: Set up the mount point and mount the USB drive partition
-- Within the VM: Set up fstab so passed-through drive will mount on boot
+  - [Within the VM: Set up the mount point and mount the USB drive partition](3%20-%20USB%20%20Drive%20Passthrough%20to%20Proxmox%20VM.md#within-the-vm-set-up-the-mount-point-and-ount-the-usb-drive-partition)
+  - [Within the VM: Set up fstab so passed-through drive will mount on boot](3%20-%20USB%20%20Drive%20Passthrough%20to%20Proxmox%20VM.md#within-the-vm--set-up-fstab-so-passed-through-drive-will-mount-on-boot)
