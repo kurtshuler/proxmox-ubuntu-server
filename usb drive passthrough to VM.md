@@ -42,7 +42,7 @@ Watch this video for a good overview of the process https://www.youtube.com/watc
    sudo nano /etc/fstab
    ```
 2. Add the following line
-   ```sh
+   ```EditorConfig
    /dev/vda1   /mnt/crucial   ext4    defaults     0        2
    ```
 3. Test by mounting all file systems in `fstab`
