@@ -131,7 +131,7 @@ Comment out line 26
 ### relayhost =
 ```
 Add this text at end of file
-```shell
+```EditorConfig
 # google mail configuration
 
 relayhost = smtp.gmail.com:587
