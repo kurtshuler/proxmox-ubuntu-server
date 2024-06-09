@@ -1,6 +1,14 @@
-# USB Drive Passthrough to Proxmox VM
-Watch this video for a good overview of the process https://www.youtube.com/watch?v=U-UTMuhmC1U
-## Within Proxmox Node :Psss through from Proxmox node to VM
+
+# 3 - USB Drive Passthrough to Proxmox VM
+## Contents
+  - [Within Proxmox Node :Psss through from Proxmox node to VM](#within-proxmox-node-psss-through-from-proxmox-node-to-vm)
+  - [Within the VM: Set up the mount point and ount the USB drive partition](#within-the-vm-set-up-the-mount-point-and-ount-the-usb-drive-partition)
+  - [Within the VM:  Set up `fstab` so passed-through drive will mount on boot](#within-the-vm--set-up-fstab-so-passed-through-drive-will-mount-on-boot)
+
+
+## Within Proxmox Node: Pass through from Proxmox node to VM
+
+> ***NOTE:*** Watch this video for a good overview of the process https://www.youtube.com/watch?v=U-UTMuhmC1U
 1. Plug in the USB drive (duh!)
 2. Go to Proxmox GUI node (usually `pve`) and disk to note which drive you want to pass through: `pve --> Disks`
 3. Note the VM number you want to pass the disk through to: `[VM-ID]`
