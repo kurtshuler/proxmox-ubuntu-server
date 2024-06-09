@@ -16,7 +16,7 @@
    ```shell
    ls -n /dev/disk/by-id/
    ```
-5. To pass through drive to you VM:
+5. To pass through drive to your VM:
    ```shell
    /sbin/qm set [VM-ID] -virtio2 /dev/disk/by-id/[DISK-ID]
    ```
