@@ -18,6 +18,9 @@ sudo apt upgrade
 sudo apt install ca-certificates curl gnupg lsb-release ntp htop zip unzip gnupg apt-transport-https ca-certificates net-tools ncdu apache2-utils git neofetch vsftpd mc
 ```
 ## Change SSH port to 2053
+> NOTE 1: These instructions are different than what is on Anand's site due to changes in Ubuntu 24.04 SSH.
+> 
+> NOTE 2: The blank line `ListenStream=` is required to ensure that port 22 is no longer used. Without this line, the SSH server would then be accessible via port 22 (default) *and* 2053.
 
 To change the port of the SSH server, the systemd configuration for ssh.socket must be changed or supplemented. The configuration adjustment is made by editing a *.conf file in the directory `/etc/systemd/system/ssh.socket.d/`.
 
@@ -26,9 +29,7 @@ Edit `override.conf` file to extend the default config:
 nano /etc/systemd/system/ssh.socket.d/override.conf
 ```
 Edit the following lines:
-> NOTE 1: These instructions are different than what is on Anand's site due to changes in Ubuntu 24.04 SSH.
-> 
-> NOTE 2: The blank line `ListenStream=` is required to ensure that port 22 is no longer used. Without this line, the SSH server would then be accessible via port 22 (default) *and* 2053.
+
 ```EditorConfig
 [Socket]
 ListenStream=
