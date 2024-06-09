@@ -25,7 +25,7 @@
 2. Find out your passed-through drive partition name (something like `/dev/sda1` or `/dev/vda1`)
 3.  Create the mount point
    ```shell
-      sudo mkdir /mnt/crucial
+   sudo mkdir /mnt/crucial
    ```
 4. Mount the passed-through drive to the VM mount point
    ```sh
