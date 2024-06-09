@@ -1,4 +1,4 @@
-# USB Drive Passthrough to VM
+# USB Drive Passthrough to Proxmox VM
 Watch this video for a good overview of the process https://www.youtube.com/watch?v=U-UTMuhmC1U
 ## Within Proxmox Node :Psss through from Proxmox node to VM
 1. Plug in the USB drive (duh!)
