@@ -5,6 +5,6 @@ Here is a summary of the contents with direct links to the markdown docs in this
 
 1 - [Set up Proxmox from scratch](1%20-%20Proxmox%20Setup.md)
   - [Make a bootable USB with OS images and tools using Ventoy](1%20-%20Proxmox%20Setup.md/#make-a-bootable-usb-with-os-images-and-tools-using-ventoy)
-  - [Proxmox post-install setup](#proxmox-post-install-setup)
-  - [Set up the Proxmox terminal](#set-up-the-proxmox-terminal)
-  - [Configure Proxmox alerts](#configure-proxmox-alerts)
+  - [Proxmox post-install setup](1%20-%20Proxmox%20Setup.md/#proxmox-post-install-setup)
+  - [Set up the Proxmox terminal](1%20-%20Proxmox%20Setup.md/#set-up-the-proxmox-terminal)
+  - [Configure Proxmox alerts](1%20-%20Proxmox%20Setup.md/#configure-proxmox-alerts)
