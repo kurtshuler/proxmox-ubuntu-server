@@ -31,13 +31,13 @@ sudo apt install ca-certificates curl gnupg lsb-release ntp htop zip unzip gnupg
 > 
 > NOTE 2: The blank line `ListenStream=` is required to ensure that port 22 is no longer used. Without this line, the SSH server would then be accessible via port 22 (default) *and* 2053.
 
-To change the port of the SSH server, the systemd configuration for ssh.socket must be changed or supplemented. The configuration adjustment is made by editing a *.conf file in the directory `/etc/systemd/system/ssh.socket.d/`.
+To change the port of the SSH server, the systemd configuration for ssh.socket must be changed or supplemented. The configuration adjustment is made by editing the socket using `systemctl`.
 
-Edit `override.conf` file to extend the default config:
+Edit `ssh.socket` file:
 ```shell-script
-nano /etc/systemd/system/ssh.socket.d/override.conf
+systemctl edit ssh.socket
 ```
-Edit the following lines:
+Add the following lines at the top under the two initial commented lines:
 
 ```EditorConfig
 [Socket]
