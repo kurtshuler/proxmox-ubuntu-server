@@ -29,7 +29,7 @@ bash -c "$(wget -qLO - https://github.com/tteck/Proxmox/raw/main/misc/post-pve-i
 ### Set up IKoolcore specific Proxmox summary 
 Follow steps in iKoolcore R2 wiki at https://wiki.ikoolcore.com/#/R2/en/FAQs/VM
 - Add iKoolcore R2 hardware stats to Proxmox summary page by running shell script at https://github.com/KoolCore/Proxmox_VE_Status
-> You may need to run `bash ./Proxmox_VE_Status_zh.sh` first, and then run `bash ./Proxmox_VE_Status_en.sh` to display sensor data in the Proxmox pve summary page.
+> NOTE: You may need to run `bash ./Proxmox_VE_Status_zh.sh` first, and then run `bash ./Proxmox_VE_Status_en.sh` to display sensor data in the Proxmox pve summary page.
 ```sh
 cd Proxmox_VE_Status
 ```
