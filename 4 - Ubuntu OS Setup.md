@@ -24,8 +24,9 @@ sudo apt upgrade
 ```
 ### Install basic/required packages
 ```shell-script
-sudo apt install ca-certificates curl gnupg lsb-release ntp htop zip unzip gnupg apt-transport-https ca-certificates net-tools ncdu apache2-utils git neofetch vsftpd mc
+sudo apt install sudo linux-generic ca-certificates curl gnupg lsb-release ntp htop zip unzip gnupg apt-transport-https ca-certificates net-tools ncdu apache2-utils git neofetch vsftpd mc
 ```
+> NOTE: `linux-generic` is required to enable GPU passthrough from Proxmox to the Ubuntu VM. It is not included in the Ubuntu Cloud-Init distribution.
 ## Change SSH port to 2053
 > NOTE 1: These instructions are different than what is on Anand's site due to changes in Ubuntu 24.04 SSH.
 > 
