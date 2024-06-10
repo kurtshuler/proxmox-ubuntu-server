@@ -26,13 +26,54 @@ systemctl status ssh.service
 ```shell-script
 bash -c "$(wget -qLO - https://github.com/tteck/Proxmox/raw/main/misc/post-pve-install.sh)"
 ```
-### Set up IKoolcore specific Proxmox summary Hardware Passthrough (iGPU):
+### Set up IKoolcore specific Proxmox summary 
 Follow steps in iKoolcore R2 wiki at https://wiki.ikoolcore.com/#/R2/en/FAQs/VM
 - Add iKoolcore R2 hardware stats to Proxmox summary page by running shell script at https://github.com/KoolCore/Proxmox_VE_Status
 > You may need to run `bash ./Proxmox_VE_Status_zh.sh` first, and then run `bash ./Proxmox_VE_Status_en.sh` to display sensor data in the Proxmox pve summary page.
-- Add hardware passthrough by running script at https://github.com/KoolCore/Proxmox_VE_Status
-- Read https://www.derekseaman.com/2023/04/proxmox-plex-lxc-with-alder-lake-transcoding.html
-### Verify that hardware passthrough is working
+```sh
+cd Proxmox_VE_Status
+```
+```sh
+bash ./Proxmox_VE_Status_zh.sh
+```
+```sh
+bash ./Proxmox_VE_Status_en.sh
+```
+## Enable Intel iGPU hardware passthrough from Proxmox to VMs:
+- Executing the iKoolcore hardware passthrough script at https://github.com/KoolCore/Proxmox_VE_Status did not work for me. It ran but didn't make the file changes. Instead, I did the steps manually from the script source code.
+### Make IOMMU changes to `/etc/default/grub`
+``` sh
+nano /etc/default/grub
+```
+Change this line to:
+```EditorConfig
+GRUB_CMDLINE_LINUX_DEFAULT="quiet intel_iommu=on iommu=pt"
+```
+Save file and
+```sh
+update-grub
+```
+### Make `vfio` changes to `/etc/modules`
+```sh
+nano /etc/modules
+```
+Add these lines:
+```EditorConfig
+vfio
+vfio_iommu_type1
+vfio_pci
+vfio_virqfd
+```
+Save file and
+```sh
+update-initramfs -k all -u
+```
+Then
+```sh
+reboot
+```
+
+## Verify that hardware passthrough is working
 Source: https://pve.proxmox.com/wiki/PCI_Passthrough
 
 Verify IOMMU is enabled:
@@ -60,7 +101,10 @@ lspci -v -s 00:02.0
 ```shell-script
 bash -c "$(wget -qLO - https://github.com/tteck/Proxmox/raw/main/misc/microcode.sh)"
 ```
-Reboot.
+Reboot
+```sh
+reboot
+```
 
 ## Set up the Proxmox terminal
 ### Install neofetch
