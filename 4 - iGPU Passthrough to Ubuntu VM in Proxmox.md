@@ -99,4 +99,24 @@ lspci -n -s 00:02 -v
    ```yaml
    Kernel driver in use: vfio-pci
    ```
+# In Proxmox GUI to add GPU to a VM
+
+1. In GUI, click
+```
+pve —> [VM#] —> Hardware —> Add —> PCI Device
+```
+
+2. In popup, select
+```yaml
+Raw Device: YES
+Device: Select your GPU
+```
+
+3. Then click the following:
+```yaml
+All Functions: YES
+ROM-Bar: YES
+Primary GPU: NO
+PCI-Express: YES (requires 'machine: q35' in VM config file)
+```
 
