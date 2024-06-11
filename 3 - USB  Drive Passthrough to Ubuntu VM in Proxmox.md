@@ -9,7 +9,7 @@
 ----
 > **NOTE:** Do these steps AFTER you have created the Ubuntu VM!
 # Within the Proxmox node (`pve`):
-##Pass through from Proxmox node to VM
+## Pass through from Proxmox node to VM
 
 > ***NOTE:*** Watch this video for a good overview of the process https://www.youtube.com/watch?v=U-UTMuhmC1U
 1. Plug in the USB drive (duh!)
