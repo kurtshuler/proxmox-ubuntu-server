@@ -122,17 +122,46 @@ update-initramfs -u -k all
 reboot
 ```
 
-5. Verify all changes
+## Verify all changes
 
-After reboot, type
+1. Verify `vfio-pci` kernel driver being used: 
 ```sh
 lspci -n -s 00:02 -v
 ```
 
-   In the output, you should see the `vfio-pci` kernel driver being used: 
+   In the output, you should see: 
    ```yaml
    Kernel driver in use: vfio-pci
    ```
+2. Verify IOMMU is enabled:
+```shell-script
+dmesg | grep -e DMAR -e IOMMU
+```
+   In the output, you should see: 
+   ```yaml
+   DMAR: IOMMU enabled
+   ```
+3. Verify IOMMU interrupt remapping is enabled:
+```shell-script
+dmesg | grep 'remapping'
+```
+   In the output, you should see something like: 
+   ```yaml
+   DMAR-IR: Enabled IRQ remapping in x2apic mode
+   ```
+4. Verify that Proxmox recognizes the GPU:
+```shell-script
+lspci -v | grep -e VGA
+```
+   In the output, you should see something like: 
+   ```yaml
+   00:02.0 VGA compatible controller: Intel Corporation Alder Lake-N [UHD Graphics] (prog-if 00 [VGA controller])
+```
+5. To get more details about your GPU VGA controller:
+```shell-script
+lspci -v -s 00:02.0
+```
+   
 # In Proxmox GUI to add GPU to a VM
 
 1. In GUI, click
