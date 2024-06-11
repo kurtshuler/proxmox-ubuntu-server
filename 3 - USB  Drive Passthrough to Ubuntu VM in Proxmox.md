@@ -8,7 +8,8 @@
   - [Within the VM:  Set up `fstab` so passed-through drive will mount on boot](#within-the-vm--set-up-fstab-so-passed-through-drive-will-mount-on-boot)
 ----
 
-# Within Proxmox Node: Pass through from Proxmox node to VM
+# Within Proxmox Node:
+##Pass through from Proxmox node to VM
 
 > ***NOTE:*** Watch this video for a good overview of the process https://www.youtube.com/watch?v=U-UTMuhmC1U
 1. Plug in the USB drive (duh!)
@@ -22,7 +23,8 @@
    ```shell
    /sbin/qm set [VM-ID] -virtio2 /dev/disk/by-id/[DISK-ID]
    ```
-#  Within the VM: Set up the mount point and mount the USB drive partition
+#  Within the Ubuntu VM: 
+Set up the mount point and mount the USB drive partition
 1. Switch to VM console
 2. Find out your passed-through drive partition name (something like `/dev/sda1` or `/dev/vda1`)
 3.  Create the mount point
@@ -45,8 +47,8 @@
    ```sh
    cd /mnt/crucial
    ls -al
-   ```
-#  Within the VM:  Set up `fstab` so the passed-through drive will mount on boot
+   ``` 
+## Set up `fstab` so the passed-through drive will mount on boot
 1. Edit the `fstab` file
    ```sh
    sudo nano /etc/fstab
