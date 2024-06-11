@@ -40,11 +40,9 @@ bash ./Proxmox_VE_Status_zh.sh
 ```sh
 bash ./Proxmox_VE_Status_en.sh
 ```
-## Enable Intel iGPU hardware passthrough from Proxmox to VMs:
-These steps are covered in [In Proxmox GUI, add GPU to VM PCI devices](1a%20-%20Proxmox%20iGPU%20Passthrough%20Setup.md#in-proxmox-gui-add-gpu-to-vm-pci-devices)
 
 
-### Run TTeck Proxmox VE Processor Microcode script at https://helper-scripts.com/scripts?id=Proxmox+VE+Processor+Microcode
+## Run TTeck Proxmox VE Processor Microcode script at https://helper-scripts.com/scripts?id=Proxmox+VE+Processor+Microcode
 > Run Tteck scripts from Proxmox *GUI* shell, not SSH!
 ```shell-script
 bash -c "$(wget -qLO - https://github.com/tteck/Proxmox/raw/main/misc/microcode.sh)"
@@ -54,12 +52,12 @@ Reboot
 reboot
 ```
 
-## Set up the Proxmox terminal
-### Install neofetch
+# Set up the Proxmox terminal
+## Install neofetch
 ```shell
 sudo apt install neofetch
 ```
-### Install Oh My Bash
+## Install Oh My Bash
 ```shell
 bash -c "$(curl -fsSL https://raw.githubusercontent.com/ohmybash/oh-my-bash/master/tools/install.sh)"
 ```
@@ -71,7 +69,7 @@ source ~/.bashrc
 > ```shell
 > export OSH='/root/.oh-my-bash'
 > ```
-### Add plugins and completions to `.bashrc`
+## Add plugins and completions to `.bashrc`
 Edit `.bashrc` by copying and comparing to GitHub Proxmox [`.bashrc`](/Proxmox%20files/.bashrc)
 ```shell
 nano .bashrc
@@ -81,10 +79,10 @@ Reload `.bashrc`
 source ~/.bashrc
 ```
 
-### Install iTerm shell integration:
+## Install iTerm shell integration:
 In iTerm 2 GUI, click on `iTerm2 → Iterm Shell Integration`
 
-## Configure Proxmox alerts
+# Configure Proxmox alerts
 This guide is adapted from Techno Tim's [Set up alerts in Proxmox before it's too late!](https://technotim.live/posts/proxmox-alerts/) article.
 
 Install dependencies
@@ -143,7 +141,7 @@ Send a test email
 ```shell
 echo "This is a test message sent from postfix on my Proxmox Server" | mail -s "Test Email from Proxmox" shulerpve1@gmail.com
 ```
-### Fix the "from" name in email
+## Fix the "from" name in email
 
 Install dependency
 ```shell
@@ -183,3 +181,4 @@ Send another  test email
 echo "This is a second test message sent from postfix on my Proxmox Server" | mail -s "Second Test Email from Proxmox" shulerpve1@gmail.com
 ```
 ---------------
+Next step is [Proxmox iGPU Passthrough Setup](1a%20-%20Proxmox%20iGPU%20Passthrough%20Setup.md)
