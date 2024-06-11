@@ -1,4 +1,4 @@
-4 - iGPU Passthrough to Ubuntu VM in Proxmox
+1a - Proxmox iGPU Passthrough Setup
 ============================================
 > **NOTE:** Do these steps AFTER you have created the Ubuntu VM!
 >
