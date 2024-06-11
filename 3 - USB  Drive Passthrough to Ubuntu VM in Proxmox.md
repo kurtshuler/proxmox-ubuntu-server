@@ -23,7 +23,8 @@
    ```shell
    /sbin/qm set [VM-ID] -virtio2 /dev/disk/by-id/[DISK-ID]
    ```
-#  Within the Ubuntu VM: 
+#  Within the Ubuntu VM:
+## Mount the passed-through drive
 Set up the mount point and mount the USB drive partition
 1. Switch to VM console
 2. Find out your passed-through drive partition name (something like `/dev/sda1` or `/dev/vda1`)
