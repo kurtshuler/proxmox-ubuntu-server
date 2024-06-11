@@ -14,6 +14,17 @@ There are (2) methods to install Ubuntu Server OS and I prefer the ***Server Liv
 
 The task viewer will open with the download status. Drink some coffee while it downloads!
 
+## Set up the VM
+1. In the Promox GUI, click on `pve` and then click on the `Create VM` button
+
+   The `Create: Virtual Machine` popup will appear
+2. Enter general settings
+```yaml
+   `VMID: 100`
+   `Name: udms`
+```
+   
+
 
 # Cloud-Init Server install using Tteck script
 
