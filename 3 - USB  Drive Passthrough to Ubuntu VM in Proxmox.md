@@ -1,5 +1,5 @@
 
-# 3 - USB Drive Passthrough to Ubuntu VM in Proxmox
+3 - USB Drive Passthrough to Ubuntu VM in Proxmox
 ===================================================
 
 ## Contents
