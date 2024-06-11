@@ -1,12 +1,13 @@
 # 1 - Set up Proxmox from scratch
+=================================
 ----
-## Contents
+# Contents
   - [Make a bootable USB with OS images and tools using Ventoy](#make-a-bootable-usb-with-os-images-and-tools-using-ventoy)
   - [Proxmox post-install setup](#proxmox-post-install-setup)
   - [Set up the Proxmox terminal](#set-up-the-proxmox-terminal)
   - [Configure Proxmox alerts](#configure-proxmox-alerts)
 ----
-## Make a bootable USB with OS images and tools using Ventoy
+# Make a bootable USB with OS images and tools using Ventoy
 1. Latest Ventoy installers at https://sourceforge.net/projects/ventoy/files/ Windows only - use Parallels Windows or Linux
 2. ISO images at:
    | ISO | URL |
@@ -16,17 +17,17 @@
    | Ubuntu SERVER Cloud-Init ISO | https://cloud-images.ubuntu.com/noble/current/ |
    | Ubuntu DESKTOP ISO | https://ubuntu.com/download/desktop/ |
 
-## Proxmox post-install setup
-### Check that SSH is running
+# Proxmox post-install setup
+## Check that SSH is running
 ```shell-script
 systemctl status ssh.service
 ```
-### Run TTeck Proxmox VE Helper-Scripts at https://helper-scripts.com/scripts?id=Proxmox+VE+Post+Install
+## Run TTeck Proxmox VE Helper-Scripts at https://helper-scripts.com/scripts?id=Proxmox+VE+Post+Install
 > Run Tteck scripts from Proxmox GUI shell, not SSH!
 ```shell-script
 bash -c "$(wget -qLO - https://github.com/tteck/Proxmox/raw/main/misc/post-pve-install.sh)"
 ```
-### Set up IKoolcore specific Proxmox summary 
+## Set up IKoolcore-specific Proxmox summary 
 Follow steps in iKoolcore R2 wiki at https://wiki.ikoolcore.com/#/R2/en/FAQs/VM
 - Add iKoolcore R2 hardware stats to Proxmox summary page by running shell script at https://github.com/KoolCore/Proxmox_VE_Status
 > NOTE: You may need to run `bash ./Proxmox_VE_Status_zh.sh` first, and then run `bash ./Proxmox_VE_Status_en.sh` to display sensor data in the Proxmox pve summary page.
@@ -40,61 +41,8 @@ bash ./Proxmox_VE_Status_zh.sh
 bash ./Proxmox_VE_Status_en.sh
 ```
 ## Enable Intel iGPU hardware passthrough from Proxmox to VMs:
-- Executing the iKoolcore hardware passthrough script at https://github.com/KoolCore/Proxmox_VE_Status did not work for me. It ran but didn't make the file changes. Instead, I did the steps manually from the script source code.
-### Make IOMMU changes to `/etc/default/grub`
-``` sh
-nano /etc/default/grub
-```
-Change this line to:
-```EditorConfig
-GRUB_CMDLINE_LINUX_DEFAULT="quiet intel_iommu=on iommu=pt"
-```
-Save file and
-```sh
-update-grub
-```
-### Make `vfio` changes to `/etc/modules`
-```sh
-nano /etc/modules
-```
-Add these lines:
-```EditorConfig
-vfio
-vfio_iommu_type1
-vfio_pci
-vfio_virqfd
-```
-Save file and
-```sh
-update-initramfs -k all -u
-```
-Then
-```sh
-reboot
-```
+These steps are covered in [In Proxmox GUI, add GPU to VM PCI devices](1a%20-%20Proxmox%20iGPU%20Passthrough%20Setup.md#in-proxmox-gui-add-gpu-to-vm-pci-devices)
 
-## Verify that hardware passthrough is working
-Source: https://pve.proxmox.com/wiki/PCI_Passthrough
-
-Verify IOMMU is enabled:
-```shell-script
-dmesg | grep -e DMAR -e IOMMU
-```
-
-Verify IOMMU interrupt remapping is enabled:
-```shell-script
-dmesg | grep 'remapping'
-```
-
-Verify that Proxmox recognizes the GPU:
-```shell-script
-lspci -v | grep -e VGA
-```
-
-Get more details about that VGA adapter:
-```shell-script
-lspci -v -s 00:02.0
-```
 
 ### Run TTeck Proxmox VE Processor Microcode script at https://helper-scripts.com/scripts?id=Proxmox+VE+Processor+Microcode
 > Run Tteck scripts from Proxmox *GUI* shell, not SSH!
