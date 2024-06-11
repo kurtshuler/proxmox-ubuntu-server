@@ -8,7 +8,7 @@
   - [Within the VM:  Set up `fstab` so passed-through drive will mount on boot](#within-the-vm--set-up-fstab-so-passed-through-drive-will-mount-on-boot)
 ----
 
-# Within Proxmox Node:
+# Within the Proxmox node (`pve`):
 ##Pass through from Proxmox node to VM
 
 > ***NOTE:*** Watch this video for a good overview of the process https://www.youtube.com/watch?v=U-UTMuhmC1U
