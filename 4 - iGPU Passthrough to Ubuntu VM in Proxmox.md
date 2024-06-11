@@ -13,11 +13,11 @@ Also, the Craft Computing video at https://www.youtube.com/watch?v=_hOBAGKLQkI f
 # Within the Proxmox Host
 
 ## Make IOMMU changes at boot
->**NOTE:** There are two possible boot systems, EFI or Grub.
+>**NOTE:** There are two possible boot systems, Systemd (EFI) or Grub.
 >
->**NOTE:** The **'Boot Mode'** in the Proxmox GUI summary page for a node indicates whether it is EFI or Grub booted.
+>**NOTE:** The **'Boot Mode'** in the Proxmox GUI summary page for a node (like `pve`) indicates whether it is EFI (systemd) or Grub booted.
 
-Since we don't yet know what bootloader our VMs will use, **do both the Grub and EFI steps below!**
+Since we don't yet know what bootloader all of our nodes will use, **do both the Grub and EFI steps below!**
 
 ### For Grub boot, edit `/etc/default/grub`
 1. Open `/etc/default/grub`
@@ -42,8 +42,10 @@ update-grub
 nano /etc/kernel/cmdline
 ```
 2. Add this to first line:
+
+>**NOTE** All commands in `/etc/kernel/cmdline` must be in a **single line** on the **first line!**
 ```EditorConfig
-intel_iommu=on
+intel_iommu=on iommu=pt
 ```
 3. Save file and close
 
