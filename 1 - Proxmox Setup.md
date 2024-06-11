@@ -41,7 +41,6 @@ bash ./Proxmox_VE_Status_zh.sh
 bash ./Proxmox_VE_Status_en.sh
 ```
 
-
 ## Run TTeck Proxmox VE Processor Microcode script at https://helper-scripts.com/scripts?id=Proxmox+VE+Processor+Microcode
 > Run Tteck scripts from Proxmox *GUI* shell, not SSH!
 ```shell-script
