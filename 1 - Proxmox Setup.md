@@ -14,7 +14,8 @@
    |-----|-----|
    | System Rescue ISO | https://www.system-rescue.org/Download/ |
    | Proxmox ISO | https://www.proxmox.com/en/downloads |
-   | Ubuntu SERVER Cloud-Init ISO | https://cloud-images.ubuntu.com/noble/current/ |
+   | Ubuntu Server Live Install ISO | https://releases.ubuntu.com/24.04/ubuntu-24.04-live-server-amd64.iso|
+   | Ubuntu Server Cloud-Init Install ISO | https://cloud-images.ubuntu.com/noble/current/ |
    | Ubuntu DESKTOP ISO | https://ubuntu.com/download/desktop/ |
 
 # Proxmox post-install setup
