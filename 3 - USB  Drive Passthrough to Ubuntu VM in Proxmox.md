@@ -27,7 +27,10 @@
 Set up the mount point and mount the USB drive partition
 1. Switch to VM console
 2. Find out your passed-through drive partition name (something like `/dev/sda1` or `/dev/vda1`)
-3.  Create the mount point
+   ```sh
+   lsblk
+   ```
+4.  Create the mount point
    ```shell
    sudo mkdir /mnt/crucial
    ```
