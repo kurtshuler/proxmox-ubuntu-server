@@ -19,6 +19,9 @@ The task viewer will open with the download status. Drink some coffee while it d
 
    The `Create: Virtual Machine` popup will appear
 2. Enter general settings
+<img src="[https://github.com/kurtshuler/proxmox-ubuntu-server/blob/main/images/VM-settings-general.png)" width="100" height="100">
+
+   ![images](images/VM-settings-general.png)
 ```yaml
    `VMID: 100`
    `Name: udms`
