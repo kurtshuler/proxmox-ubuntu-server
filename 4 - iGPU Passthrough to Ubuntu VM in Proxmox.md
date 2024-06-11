@@ -12,7 +12,29 @@ Also, the Craft Computing video at https://www.youtube.com/watch?v=_hOBAGKLQkI f
 
 # Within the Proxmox Host
 
-## Add IOMMU Support
+## Make IOMMU changes at boot
+>**NOTE:** There are two possible boot systems, EFI or Grub.
+>
+>**NOTE:** The **'Boot Mode'** in the Proxmox GUI summary page for a node indicates whether it is EFI or Grub booted.
+
+Since we don't yet know what bootloader our VMs will use, **do both the Grub and EFI steps below!**
+
+### For Grub boot, edit `/etc/default/grub`
+1. Open `/etc/default/grub`
+``` sh
+nano /etc/default/grub
+```
+2. Change this line to:
+```EditorConfig
+GRUB_CMDLINE_LINUX_DEFAULT="quiet intel_iommu=on iommu=pt"
+```
+3. Save file and close
+
+4. Run:
+```sh
+update-grub
+```
+### For EFI boot, edit `/etc/kernel/cmdline`
 > **NOTE:** These steps are for EFI boot systems.
 
 1. Open `/etc/kernel/cmdline`
