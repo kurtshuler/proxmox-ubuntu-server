@@ -15,7 +15,7 @@ There are (2) methods to install Ubuntu Server OS and I prefer the ***Server Liv
 The task viewer will open with the download status. Drink some coffee while it downloads!
 
 
-# Cloud-Init Server install using TTeck script
+# Cloud-Init Server install using Tteck script
 
 >**NOTE** I do NOT prefer this way because, for iGPU passthrough, the required files in `linux-generic` are not part of the Ubuntu Cloud-Init distribution used by the Tteck Ubuntu installation script. That means we have to remember to load them using `sudo apt install sudo linux-generic` after starting the VM for the first time.
 
