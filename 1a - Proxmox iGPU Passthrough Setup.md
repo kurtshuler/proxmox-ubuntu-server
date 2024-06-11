@@ -162,9 +162,11 @@ lspci -v | grep -e VGA
 lspci -v -s 00:02.0
 ```
    
-# In Proxmox GUI to add GPU to a VM
+# In Proxmox GUI, add GPU to VM PCI devices
+> **NOTE:** These steps can only be done after you have created a VM and only affect that VM. They are included here for your convenience.
+>
 
-1. In GUI, click
+1. In Proxmox GUI, click
 ```
 pve —> [VM#] —> Hardware —> Add —> PCI Device
 ```
