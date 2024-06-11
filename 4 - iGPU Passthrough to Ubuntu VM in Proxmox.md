@@ -1,7 +1,17 @@
 4 - iGPU Passthrough to Ubuntu VM in Proxmox
 ============================================
 > **NOTE:** Do these steps AFTER you have created the Ubuntu VM!
+>
+> **SOURCES:**
+> 1. iKoolcore R2 script code at https://github.com/KoolCore/Proxmox_VE_Status/blob/main/passthrough.sh
+> 2. Craft Computing video at https://www.youtube.com/watch?v=_hOBAGKLQkI 
+
+Executing the iKoolcore R2 hardware passthrough script at https://github.com/KoolCore/Proxmox_VE_Status did not work for me. It ran but didn't make the file changes. Instead, I created these steps manually from the script source code at https://github.com/KoolCore/Proxmox_VE_Status/blob/main/passthrough.sh. 
+
+Also, the Craft Computing video at https://www.youtube.com/watch?v=_hOBAGKLQkI follows these steps almost exactly, wiht the only difference being the changes to `/etc/kernel/cmdline`.
+
 # Within the Proxmox Host
+
 ## Add IOMMU Support
 > **NOTE:** These steps are for EFI boot systems.
 
