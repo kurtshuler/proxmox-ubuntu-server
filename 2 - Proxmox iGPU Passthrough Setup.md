@@ -1,4 +1,4 @@
-1a - Proxmox iGPU Passthrough Setup
+2 - Proxmox iGPU Passthrough Setup
 ============================================
 > **NOTE:** The steps can be done before or after you have created a VM. However, it is best to do these after every bare metal Proxmox install if you intend to use GPU passthrough in Vms.
 >
