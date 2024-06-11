@@ -1,4 +1,4 @@
-2 - Ubuntu VM installation within Proxmox
+3 - Ubuntu VM installation within Proxmox
 ==========================================
 
 # Install Ubuntu VM within Proxmox PVE GUI shell
