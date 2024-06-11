@@ -1,5 +1,7 @@
 
-# 3 - USB Drive Passthrough to Proxmox VM
+# 3 - USB Drive Passthrough to Ubuntu VM in Proxmox
+===================================================
+
 ## Contents
   - [Within Proxmox Node: Pass through from Proxmox node to VM](#within-proxmox-node-psss-through-from-proxmox-node-to-vm)
   - [Within the VM: Set up the mount point and mount the USB drive partition](#within-the-vm-set-up-the-mount-point-and-ount-the-usb-drive-partition)
