@@ -1,6 +1,6 @@
 1a - Proxmox iGPU Passthrough Setup
 ============================================
-> **NOTE:** Do these steps AFTER you have created the Ubuntu VM!
+> **NOTE:** The steps can be done before or after you have created a VM. However, it is best to do these after every bare metal Proxmox install if you intend to use GPU passthrough in Vms.
 >
 > **SOURCES:**
 > 1. iKoolcore R2 script code at https://github.com/KoolCore/Proxmox_VE_Status/blob/main/passthrough.sh
