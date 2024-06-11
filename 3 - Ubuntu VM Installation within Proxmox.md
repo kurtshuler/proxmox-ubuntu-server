@@ -1,6 +1,6 @@
 3 - Ubuntu VM installation within Proxmox
 ==========================================
-There are (2) methods to install Ubuntu Server OS and I prefer the ***Server Live ISO install*** over the Cloud-Init Server install. The Live install takes about the same amount of time to install as the Cloud-Init versions, at least if you are only building one VM. And you don't have to remember wher to go in the Proxmox GUI for the VM cloud init settings, and what to do in the VM terminal after install.
+There are (2) methods to install Ubuntu Server OS and I prefer the ***Server Live ISO install*** over the Cloud-Init Server install. The Live install takes about the same amount of time to install as the Cloud-Init version, at least if you are only building one VM. And you don't have to remember where to go in the Proxmox GUI for the VM cloud init settings, and what to do in the VM terminal after install.
 
 # Server Live ISO install (preferred by me)
 
