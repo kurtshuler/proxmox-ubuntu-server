@@ -13,11 +13,17 @@ Run Tteck Ubuntu 24.04 script at https://helper-scripts.com/scripts?id=Ubuntu+24
 bash -c "$(wget -qLO - https://github.com/tteck/Proxmox/raw/main/vm/ubuntu2404-vm.sh)"
 ```
 ## Setup Cloud-Init on Proxmox
-> WARNING: Do NOT start the VM until after you do the following Cloud-Init setup steps!
+> **WARNING:** Do NOT start the VM until after you do the following Cloud-Init setup steps!
 
-<code style="color : #FF0000">text</code>
+```diff
+- ⬇ WARNING: Do NOT start the VM until after you do the following Cloud-Init setup steps linked below! ⬇
+```
 
-**Follow the detailed instructions at** https://github.com/tteck/Proxmox/discussions/2072 
+### Follow the detailed instructions at https://github.com/tteck/Proxmox/discussions/2072 
+
+```diff
+- ⬆ WARNING: Do NOT start the VM until after you do the following Cloud-Init setup steps linked above! ⬆
+```
 
 ## Start the VM
 Load files required for iGPU hardware passthrough
