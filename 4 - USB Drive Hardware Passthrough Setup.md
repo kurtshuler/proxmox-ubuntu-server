@@ -23,6 +23,12 @@
    ```shell
    /sbin/qm set [VM-ID] -virtio2 /dev/disk/by-id/[DISK-ID]
    ```
+
+   EXAMPLE:
+     ```shell
+   /sbin/qm set 100 -virtio2 /dev/disk/by-id/usb-Micron_CT4000X9SSD9_2332E8DB05F5-0:0
+   ```
+  
 #  Within the Ubuntu VM:
 ## Mount the passed-through drive
 Set up the mount point and mount the USB drive partition
