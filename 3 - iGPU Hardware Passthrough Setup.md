@@ -69,9 +69,10 @@ vfio_virqfd
 
 3. Save file and close
 
-## Configure VFIO for PCIe Passthrough-
+## Configure VFIO for PCIe Passthrough
 
 1. Find your GPU PCI identifier
+   
    It will be something like `00:02`
 ```sh
 lspci
