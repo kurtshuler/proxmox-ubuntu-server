@@ -34,7 +34,7 @@ GRUB_CMDLINE_LINUX_DEFAULT="quiet intel_iommu=on iommu=pt"
 ```sh
 update-grub
 ```
-### For EFI boot, edit `/etc/kernel/cmdline`
+### For Systemd (EFI) boot, edit `/etc/kernel/cmdline`
 > **NOTE:** These steps are for EFI boot systems.
 
 1. Open `/etc/kernel/cmdline`
