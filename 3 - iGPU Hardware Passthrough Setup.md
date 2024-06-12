@@ -17,7 +17,7 @@ Also, the Craft Computing video at https://www.youtube.com/watch?v=_hOBAGKLQkI f
 >
 >**NOTE:** The **'Boot Mode'** in the Proxmox GUI summary page for a node (like `pve`) indicates whether it is EFI (systemd) or Grub booted.
 
-Since we don't yet know what bootloader all of our nodes will use, **do both the Grub and EFI steps below!**
+Since we don't yet know what bootloader all of our nodes will use, I chose to **do both the Grub and EFI steps below!**
 
 ### For Grub boot, edit `/etc/default/grub`
 1. Open `/etc/default/grub`
