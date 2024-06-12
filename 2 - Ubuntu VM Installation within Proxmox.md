@@ -22,12 +22,6 @@ Load files required for iGPU hardware passthrough
 ```sh
 sudo apt install sudo linux-generic
 ```
-## Go to next steps
-
-dsffd
-
-[3 - iGPU Hardware Passthrough Setup](jkljlk)
-[4 - USB Drive Hardware Passthrough Setup](lklkj)
 ----------------
 # Manual Install Method: Server Live ISO install
 
