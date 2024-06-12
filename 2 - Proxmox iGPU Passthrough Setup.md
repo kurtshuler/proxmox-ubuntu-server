@@ -166,10 +166,14 @@ lspci -v -s 00:02.0
 > **NOTE:** These steps can only be done after you have created a VM and only affect that VM. They are included here for your convenience.
 >
 
-1. In Proxmox GUI, click
+1. In Proxmox GUI, click `PCI Device`
 ```
 pve —> [VM#] —> Hardware —> Add —> PCI Device
 ```
+   
+   `https://releases.ubuntu.com/24.04/ubuntu-24.04-live-server-amd64.iso`
+3. Click the `Query URL` button
+4. Click the `Download` button
 
 2. In popup, select
 ```yaml
