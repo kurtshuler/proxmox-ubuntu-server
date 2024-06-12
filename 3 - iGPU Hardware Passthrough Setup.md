@@ -199,6 +199,19 @@ Click on "Display", then "Edit", and set "Graphic Card" to "none", and press OK.
 lspci -k | grep VGA
 lspci -n -s 01:00 -v
 ```
+## Reboot and verify iGPU hardware passthough is working in the Ubuntu VM
+Check to see if your VGA adapter is available
+```sh
+lspci -nnv | grep VGA
+```
+Check to confirm `Kernel driver in use: i915`:
+```sh
+lspci -n -s 01:00 -v
+```
+Check to see that you have `renderD128` in `/dev/dri`
+```sh
+ls -l /dev/dri/by-path/
+```
 
 # Next Steps
 
