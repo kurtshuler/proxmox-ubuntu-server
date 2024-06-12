@@ -31,8 +31,19 @@ The task viewer will open with the download status. Drink some coffee while it d
    `VMID: 100`
    `Name: udms`
 ```
-   
+2. Enter OS settings
 
+System
+
+Disks
+
+CPU
+
+Memory
+
+Network
+
+Confirm
 
 # Cloud-Init Server install using Tteck script
 
