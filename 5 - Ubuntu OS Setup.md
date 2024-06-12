@@ -143,4 +143,4 @@ sudo ufw status
 
 ~~[5 - Ubuntu OS setup](5%20-%20Ubuntu%20OS%20Setup.md)~~
 
-DONE!
+Download Anand's Auto-Traefik from https://github.com/htpcBeginner/auto-traefik
