@@ -7,8 +7,11 @@
   - [Configure Proxmox alerts](#configure-proxmox-alerts)
 ----
 # Make a bootable USB with OS images and tools using Ventoy
-1. Latest Ventoy installers at https://sourceforge.net/projects/ventoy/files/ Windows only - use Parallels Windows or Linux
-2. ISO images at:
+1. Latest Ventoy installers at https://sourceforge.net/projects/ventoy/files/
+  
+   It is Linux or Windows only. For Mac, use Parallels Windows or Linux.
+   
+4. ISO images at:
    | ISO | URL |
    |-----|-----|
    | System Rescue ISO | https://www.system-rescue.org/Download/ |
