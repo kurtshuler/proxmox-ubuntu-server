@@ -24,12 +24,25 @@ bash -c "$(wget -qLO - https://github.com/tteck/Proxmox/raw/main/vm/ubuntu2404-v
 ```diff
 - ⬆ WARNING: Do NOT start the VM until after you do the following Cloud-Init setup steps linked above! ⬆
 ```
+For the steps above, STOP at the Install Docker step. We will do that later.
 
-## Start the VM
-Load files required for iGPU hardware passthrough
+## Load files required for iGPU hardware passthrough
 ```sh
 sudo apt install sudo linux-generic
 ```
+
+## Next Steps
+
+~~[1 - Set up Proxmox from scratch](1%20-%20Proxmox%20Setup.md)~~
+
+~~[2 - Ubuntu VM installation within Proxmox](2%20-%20Ubuntu%20VM%20Installation%20within%20Proxmox.md)~~
+
+[3 - iGPU Hardware Passthrough Setup](3%20-%20iGPU%20Hardware%20Passthrough%20Setup.md)
+
+[4 - USB Drive Hardware Passthrough Setup](4%20-%20USB%20Drive%20Hardware%20Passthrough%20Setup.md)
+
+[5 - Ubuntu OS setup](5%20-%20Ubuntu%20OS%20Setup.md)
+
 ----------------
 # Manual Install Method: Server Live ISO install
 
