@@ -130,31 +130,7 @@ Check  UFW status
 ```shell
 sudo ufw status
 ```
-## Set up iGPU hardware passthrough from Proxmox to this Ubuntu VM
-In the Proxmox GUI, we will add a PCI Device (your iGPU) to the Ubuntu VM.
 
-Under the VM's **Hardware** Tab/Window, click on the *Add* button towards the top. Then under the drop-down menu, click *PCI Device*.
-
-You might have to experiment to see what works. I have all the settings turned on:
-```yaml
-All Functions: YES
-Rom-Bar: YES
-Primary GPU: YES
-PCI-Express: YES (requires 'machine: q35' in VM config)
-```
-Reboot the VM
-```sh
-reboot
-```
-## Verify iGPU hardware passthough is working in the Ubuntu VM
-Check to see if your VGA adapter is available
-```sh
-lspci -nnv | grep VGA
-```
-Check to see that you have `renderD128` in `/dev/dri`
-```sh
-ls -l /dev/dri/by-path/
-```
 # Next Steps
 
 ~~[1 - Set up Proxmox from scratch](1%20-%20Proxmox%20Setup.md)~~
