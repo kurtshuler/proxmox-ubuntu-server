@@ -83,6 +83,34 @@ Use default settings.
 
    ![images](images/VM-settings-confirm.png)
 
+## iGPU Passthrough: In Proxmox GUI, add GPU to VM PCI devices
+>**NOTE:** The Proxmox node (`pve`) iGPU setup steps at [2 - Proxmox iGPU Passthrough Setup](2%20-%20Proxmox%20iGPU%20Passthrough%20Setup.md) must be completed first for iGPU passthrough to work within the VM. These in-VM steps are repeated at the bottom of that page.
+>
+>**NOTE:** The steps below can only be done after you have created a VM and only affect that VM.
+
+1. In Proxmox GUI, click `PCI Device`
+```
+pve —> [VM#] —> Hardware —> Add —> PCI Device
+``` 
+   ![images](images/iGPU-passthrough-add-pci-device-button.png)
+   
+2. In popup, select
+```yaml
+Raw Device: YES
+Device: Select your GPU
+```
+Then click the following:
+```yaml
+All Functions: YES
+ROM-Bar: YES
+Primary GPU: NO
+PCI-Express: YES (requires 'machine: q35' in VM config file)
+```
+   ![images](images/iGPU-passthrough-add-pci-device-button-screen.png)
+   
+3. Check the results
+   ![images](images/iGPU-passthrough-add-pci-device-check.png)
+
 
 # Cloud-Init Server install using Tteck script
 
