@@ -194,6 +194,12 @@ PCI-Express: YES (requires 'machine: q35' in VM config file)
 Click on "Display", then "Edit", and set "Graphic Card" to "none", and press OK.
 >**NOTE:** This will mean that the "console" function on the left will no longer work, and the only way to get into your VM will be via SSH. I have tried dozens of options to get the console to keep working after adding the GPU, and nothing has worked, but SSH to the server still works just fine. Open to suggestions on how to get this to work long term)
 
+## Reboot VM and verify
+```sh
+lspci -k | grep VGA
+lspci -n -s 01:00 -v
+```
+
 # Next Steps
 
 ~~[1 - Set up Proxmox from scratch](1%20-%20Proxmox%20Setup.md)~~
