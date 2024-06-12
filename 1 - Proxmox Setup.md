@@ -1,6 +1,6 @@
 # 1 - Set up Proxmox from scratch
-=================================
-# Contents
+
+## Contents
   - [Make a bootable USB with OS images and tools using Ventoy](#make-a-bootable-usb-with-os-images-and-tools-using-ventoy)
   - [Proxmox post-install setup](#proxmox-post-install-setup)
   - [Set up the Proxmox terminal](#set-up-the-proxmox-terminal)
@@ -179,5 +179,16 @@ Send another  test email
 ```shell
 echo "This is a second test message sent from postfix on my Proxmox Server" | mail -s "Second Test Email from Proxmox" shulerpve1@gmail.com
 ```
----------------
-Next step is [Proxmox iGPU Passthrough Setup](1a%20-%20Proxmox%20iGPU%20Passthrough%20Setup.md)
+
+# Next Steps
+
+~~1 - Set up Proxmox from scratch~~
+
+[2 - Ubuntu VM installation within Proxmox](2%20-%20Ubuntu%20VM%20Installation%20within%20Proxmox.md)
+
+[3 - iGPU Hardware Passthrough Setup](3%20-%20iGPU%20Hardware%20Passthrough%20Setup.md)
+
+[4 - USB Drive Hardware Passthrough Setup](4%20-%20USB%20Drive%20Hardware%20Passthrough%20Setup.md)
+
+[5 - Ubuntu OS setup](5%20-%20Ubuntu%20OS%20Setup.md)
+
