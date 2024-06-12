@@ -15,7 +15,7 @@
 1. Plug in the USB drive (duh!)
 2. Go to Proxmox GUI node (usually `pve`) and disks to note which drive you want to pass through: `pve --> Disks`
 3. Note the VM number you want to pass the disk through to: `[VM-ID]`
-4. Enter in `pve` shell to get list of connected drives by ID. Note the ID for your USB drive: `[DISK-ID]`
+4. Enter in `pve` terminal or shell to get list of connected drives by ID. Note the ID for your USB drive: `[DISK-ID]`
    ```shell
    ls -n /dev/disk/by-id/
    ```
