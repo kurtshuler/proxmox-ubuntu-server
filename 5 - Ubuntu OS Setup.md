@@ -140,7 +140,7 @@ You might have to experiment to see what works. I have all the settings turned o
 All Functions: YES
 Rom-Bar: YES
 Primary GPU: YES
-PCI-Express: YES (requires 'machine: q35' in vm config file)
+PCI-Express: YES (requires 'machine: q35' in VM config)
 ```
 Reboot the VM
 ```sh
