@@ -18,7 +18,7 @@ The task viewer will open with the download status. Drink some coffee while it d
 1. In the Promox GUI, click on `pve` and then click on the `Create VM` button
 
    The `Create: Virtual Machine` popup will appear
-2. Enter general settings
+2. Enter General settings
    
 ```yaml
    `VM ID: 100`
@@ -27,23 +27,62 @@ The task viewer will open with the download status. Drink some coffee while it d
    
    ![images](images/VM-settings-general.png)
    
+
+3. Enter OS settings
+
+Choose your ISO image.
+   ![images](images/VM-settings-OS.png)
+
+4. Enter System settings
+
 ```yaml
-   `VMID: 100`
-   `Name: udms`
+   `Machine: q35`
+   `BIOS: OVMF (UEFI)`
+   `Add EFI Disk: YES`
+   `EFI Storage: local-lvm`
+   `SCSI COntroller: VirtIO SCSI single`
+   `Qemu Agent: YES`
+
 ```
-2. Enter OS settings
+   ![images](images/VM-settings-system.png)
 
-System
+5. Enter Disks settings
 
-Disks
+```yaml
+   `Storage: local-lvm`
+   `Disk size (GiB): 128`
+   `Discard: YES`
+   `SSD emeulation: YES`
+   `Backup: YES`
+```
+   ![images](images/VM-settings-disks.png)
 
-CPU
+6. Enter CPU settings
 
-Memory
+```yaml
+   `Cores: 8`
+   `Type: host`
+```
+   ![images](images/VM-settings-CPU.png)
 
-Network
+7. Enter Memory settings
 
-Confirm
+```yaml
+   `Memory (MiB): 12288`
+   `Ballooning Device: NO/OFF`
+```
+   ![images](images/VM-settings-memory.png)
+
+8. Enter Network settings
+
+Use default settings.
+
+   ![images](images/VM-settings-network.png)
+
+9. Check and Confirm
+
+   ![images](images/VM-settings-confirm.png)
+
 
 # Cloud-Init Server install using Tteck script
 
