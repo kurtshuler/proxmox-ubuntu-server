@@ -2,7 +2,7 @@
 ==========================================
 There are (2) methods to install Ubuntu Server OS and I prefer the Cloud-Init Server install over the manual Server Live ISO install.
 
-# Cloud-Init Server install using Tteck script
+# Cloud-Init Server install using Tteck Proxmox VE Helper script
 
 >**NOTE** For iGPU passthrough, the required files in `linux-generic` are NOT part of the Ubuntu Cloud-Init distribution used by the Tteck Ubuntu installation script. That means we have to remember to load them using `sudo apt install sudo linux-generic` after starting the VM for the first time.
 
@@ -110,4 +110,12 @@ Use default settings.
 
    ![images](images/VM-settings-confirm.png)
 
-----
+~~[1 - Set up Proxmox from scratch](1%20-%20Proxmox%20Setup.md)~~
+
+~~[2 - Ubuntu VM installation within Proxmox](2%20-%20Ubuntu%20VM%20Installation%20within%20Proxmox.md)~~
+
+[3 - iGPU Hardware Passthrough Setup](3%20-%20iGPU%20Hardware%20Passthrough%20Setup.md)
+
+[4 - USB Drive Hardware Passthrough Setup](4%20-%20USB%20Drive%20Hardware%20Passthrough%20Setup.md)
+
+[5 - Ubuntu OS setup](5%20-%20Ubuntu%20OS%20Setup.md)
