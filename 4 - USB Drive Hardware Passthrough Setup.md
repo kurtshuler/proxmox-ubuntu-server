@@ -65,4 +65,9 @@ Set up the mount point and mount the USB drive partition
    ```sh
    sudo mount -av
    ```
+# Next Step
+
+sads
+
+[4 - USB Drive Hardware Passthrough Setu
    ----
