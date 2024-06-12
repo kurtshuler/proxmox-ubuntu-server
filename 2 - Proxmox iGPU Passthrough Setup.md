@@ -171,17 +171,14 @@ lspci -v -s 00:02.0
 pve —> [VM#] —> Hardware —> Add —> PCI Device
 ```
    
-   `https://releases.ubuntu.com/24.04/ubuntu-24.04-live-server-amd64.iso`
-3. Click the `Query URL` button
-4. Click the `Download` button
-
+   ![images](images/iGPU-passthrough-add-pci-device-button.png)
+   
 2. In popup, select
 ```yaml
 Raw Device: YES
 Device: Select your GPU
 ```
-
-3. Then click the following:
+Then click the following:
 ```yaml
 All Functions: YES
 ROM-Bar: YES
@@ -189,3 +186,8 @@ Primary GPU: NO
 PCI-Express: YES (requires 'machine: q35' in VM config file)
 ```
 
+   ![images](images/iGPU-passthrough-add-pci-device-button-screen.png)
+   
+3. Check the results
+
+   ![images](images/iGPU-passthrough-add-pci-device-check.png)
