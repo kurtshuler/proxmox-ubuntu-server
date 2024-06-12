@@ -15,9 +15,7 @@ bash -c "$(wget -qLO - https://github.com/tteck/Proxmox/raw/main/vm/ubuntu2404-v
 ## Setup Cloud-Init on Proxmox
 > WARNING: Do NOT start the VM until after you do the following Cloud-Init setup steps!
 
-- This is a red colored line
-+ This is a green colored line
-@@ This is a purple colored line @@
+<code style="color : #FF0000">text</code>
 
 **Follow the detailed instructions at** https://github.com/tteck/Proxmox/discussions/2072 
 
