@@ -191,6 +191,12 @@ PCI-Express: YES (requires 'machine: q35' in VM config file)
 
 # Next Steps
 
+~~[1 - Set up Proxmox from scratch](1%20-%20Proxmox%20Setup.md)~~
+
+~~[2 - Ubuntu VM installation within Proxmox](2%20-%20Ubuntu%20VM%20Installation%20within%20Proxmox.md)~~
+
+~~[3 - iGPU Hardware Passthrough Setup](3%20-%20iGPU%20Hardware%20Passthrough%20Setup.md)~~
+
 [4 - USB Drive Hardware Passthrough Setup](4%20-%20USB%20Drive%20Hardware%20Passthrough%20Setup.md)
 
 [5 - Ubuntu OS setup](5%20-%20Ubuntu%20OS%20Setup.md)
