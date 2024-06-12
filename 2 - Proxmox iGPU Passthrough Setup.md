@@ -169,8 +169,7 @@ lspci -v -s 00:02.0
 1. In Proxmox GUI, click `PCI Device`
 ```
 pve —> [VM#] —> Hardware —> Add —> PCI Device
-```
-   
+``` 
    ![images](images/iGPU-passthrough-add-pci-device-button.png)
    
 2. In popup, select
@@ -185,9 +184,7 @@ ROM-Bar: YES
 Primary GPU: NO
 PCI-Express: YES (requires 'machine: q35' in VM config file)
 ```
-
    ![images](images/iGPU-passthrough-add-pci-device-button-screen.png)
    
 3. Check the results
-
    ![images](images/iGPU-passthrough-add-pci-device-check.png)
