@@ -189,6 +189,8 @@ PCI-Express: YES (requires 'machine: q35' in VM config file)
 3. Check the results
    ![images](images/iGPU-passthrough-add-pci-device-check.png)
 
-# Next step
+# Next Steps
 
-[4 - USB Drive Hardware Passthrough Setup](lklkj)
+[4 - USB Drive Hardware Passthrough Setup](4%20-%20USB%20Drive%20Hardware%20Passthrough%20Setup.md)
+
+[5 - Ubuntu OS setup](5%20-%20Ubuntu%20OS%20Setup.md)
