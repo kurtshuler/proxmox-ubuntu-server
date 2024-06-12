@@ -1,6 +1,6 @@
 3 - iGPU Hardware Passthrough Setup
 ============================================
-> **NOTE:** The steps can be done before or after you have created a VM. However, it is best to do these after every bare metal Proxmox install if you intend to use GPU passthrough in Vms.
+> **NOTE:** Most of these steps can be done before or after you have created a VM.
 >
 > **SOURCES:**
 > 1. iKoolcore R2 script code at https://github.com/KoolCore/Proxmox_VE_Status/blob/main/passthrough.sh
