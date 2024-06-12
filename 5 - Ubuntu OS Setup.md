@@ -136,7 +136,7 @@ In the Proxmox GUI, we will add a PCI Device (your iGPU) to the Ubuntu VM.
 Under the VM's **Hardware** Tab/Window, click on the *Add* button towards the top. Then under the drop-down menu, click *PCI Device*.
 
 You might have to experiment to see what works. I have all the settings turned on:
-```EditorConfig
+```yaml
 All Functions: YES
 Rom-Bar: YES
 Primary GPU: YES
