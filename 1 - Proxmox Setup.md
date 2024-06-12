@@ -182,7 +182,7 @@ echo "This is a second test message sent from postfix on my Proxmox Server" | ma
 
 # Next Steps
 
-~~1 - Set up Proxmox from scratch~~
+~~[1 - Set up Proxmox from scratch](1%20-%20Proxmox%20Setup.md)~~
 
 [2 - Ubuntu VM installation within Proxmox](2%20-%20Ubuntu%20VM%20Installation%20within%20Proxmox.md)
 
