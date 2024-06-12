@@ -8,7 +8,7 @@
 
 Executing the iKoolcore R2 hardware passthrough script at https://github.com/KoolCore/Proxmox_VE_Status did not work for me. It ran but didn't make the file changes. Instead, I created these steps manually from the script source code at https://github.com/KoolCore/Proxmox_VE_Status/blob/main/passthrough.sh. 
 
-Also, the Craft Computing video at https://www.youtube.com/watch?v=_hOBAGKLQkI follows these steps almost exactly, wiht the only difference being the changes to `/etc/kernel/cmdline`.
+Also, the Craft Computing video at https://www.youtube.com/watch?v=_hOBAGKLQkI follows these steps almost exactly, with the only difference being the changes to `/etc/kernel/cmdline`.
 
 # Within the Proxmox Host
 
