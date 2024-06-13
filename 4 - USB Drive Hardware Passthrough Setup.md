@@ -29,7 +29,21 @@
    /sbin/qm set 100 -virtio2 /dev/disk/by-id/usb-Micron_CT4000X9SSD9_2332E8DB05F5-0:0
    ```
   
-#  Within the Ubuntu VM:
+# Within the Proxmox GUI VM setup page
+## Verify your drive is passed through and turn off backup
+> **NOTE:** These steps can only be done after you have created a VM and only affect that VM.
+>
+
+1. In Proxmox GUI, verify your disk ia passed through to your VM
+```
+pve —> [VM#] —> Hardware —> Hard Disk
+```
+2. In Proxmox GUI, double-click your disk and uncheck `Backup`
+
+ADD NEW PICTURE HERE:
+   ![images](images/iGPU-passthrough-add-pci-device-button.png)
+
+# Within the running Ubuntu VM:
 ## Mount the passed-through drive
 Set up the mount point and mount the USB drive partition
 1. Switch to VM console
