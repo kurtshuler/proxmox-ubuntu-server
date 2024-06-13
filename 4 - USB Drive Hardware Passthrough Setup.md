@@ -52,10 +52,9 @@
 ```
 pve —> [VM#] —> Hardware —> Hard Disk
 ```
-2. In Proxmox GUI, double-click your disk and uncheck `Backup`
+2. In Proxmox GUI, double-click your disk and **uncheck** `Backup`
 
-ADD NEW PICTURE HERE:
-   ![images](images/iGPU-passthrough-add-pci-device-button.png)
+   ![images](images/USB-drive-passthrough-backup-off.png)
 
 # Within the running Ubuntu VM:
 ## Mount the passed-through drive
