@@ -24,10 +24,21 @@
    /sbin/qm set [VM-ID] -virtio2 /dev/disk/by-id/[DISK-ID]
    ```
 
-   EXAMPLE:
-     ```shell
+   *EXAMPLE:*
+   ```shell
    /sbin/qm set 100 -virtio2 /dev/disk/by-id/usb-Micron_CT4000X9SSD9_2332E8DB05F5-0:0
    ```
+   
+6. Check to see that USB drive was passed through
+   ```shell
+   more /etc/pve/qemu-server/[VM-ID].conf
+   ```
+
+   *EXAMPLE:*
+   ```shell
+   more /etc/pve/qemu-server/100.conf
+   ```
+
   
 # Within the Proxmox GUI VM setup page
 ## Verify your drive is passed through and turn off backup
