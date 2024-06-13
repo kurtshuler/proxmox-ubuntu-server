@@ -62,7 +62,8 @@ ADD NEW PICTURE HERE:
 Set up the mount point and mount the USB drive partition
 1. Switch to VM console
 2. Find out your passed-through drive partition name (something like `/dev/vda1`)
-   `vda` is different from `sda`. `vda` is a paravirtualized
+
+   > **NOTE:** `vda` is different from `sda`. `vda` is a paravirtualized disk and is faster than an emulated `sda` disk 😃.
 
    ```sh
    lsblk
