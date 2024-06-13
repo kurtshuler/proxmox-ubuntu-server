@@ -48,7 +48,7 @@
 > **NOTE:** These steps can only be done after you have created a VM and only affect that VM.
 >
 
-1. In Proxmox GUI, verify your disk ia passed through to your VM
+1. In Proxmox GUI, verify your disk is passed through to your VM
 ```
 pve —> [VM#] —> Hardware —> Hard Disk
 ```
