@@ -8,10 +8,13 @@
   - [Within the VM:  Set up `fstab` so passed-through drive will mount on boot](#within-the-vm--set-up-fstab-so-passed-through-drive-will-mount-on-boot)
 ----
 > **NOTE:** Do these steps AFTER you have created the Ubuntu VM!
+
 # Within the Proxmox node (`pve`):
 ## Pass through from Proxmox node to VM
 
-> ***NOTE:*** Watch this video for a good overview of the process https://www.youtube.com/watch?v=U-UTMuhmC1U
+> ***Sources:*** Watch theses two videos for a good overview of the process:
+> - H2DC at https://www.youtube.com/watch?v=U-UTMuhmC1U
+> - BlueMonkey 4n6 at https://www.youtube.com/watch?v=wGhSJ-G9jQg
 1. Plug in the USB drive (duh!)
 2. Go to Proxmox GUI node (usually `pve`) and disks to note which drive you want to pass through: `pve --> Disks`
 3. Note the VM number you want to pass the disk through to: `[VM-ID]`
@@ -58,7 +61,9 @@ ADD NEW PICTURE HERE:
 ## Mount the passed-through drive
 Set up the mount point and mount the USB drive partition
 1. Switch to VM console
-2. Find out your passed-through drive partition name (something like `/dev/sda1` or `/dev/vda1`)
+2. Find out your passed-through drive partition name (something like `/dev/vda1`)
+   `vda` is different from `sda`. `vda` is a paravirtualized
+
    ```sh
    lsblk
    ```
