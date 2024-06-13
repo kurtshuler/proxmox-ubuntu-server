@@ -50,6 +50,10 @@ Restart SSH:
 systemctl daemon-reload
 sudo systemctl restart ssh  
 ```
+Reboot the VM:
+```shell
+reboot 
+```
 Ensure that port 22 is *closed* and port 2053 is *open*:
 ```sh
 netstat -ant | grep 2053
