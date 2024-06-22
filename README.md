@@ -19,7 +19,7 @@ This repository describes how to build a Proxmox server from scratch and create 
 ### [5 - USB Drive Passthrough to Ubuntu VM in Proxmox](5%20-%20USB%20Drive%20Hardware%20Passthrough%20Setup.md)
   - Within Proxmox Node: Pass through from Proxmox node to VM
   - Within Proxmox GUI VM setup page: Verify your drive is passed through and turn off backup
-  - Within the running Ubuntu VM: Mount the passed-through drive and add it to up fstab
+  - Within the running Ubuntu VM: Mount the passed-through drive and add it to fstab
 
 ### [6 - Ubuntu OS setup](6%20-%20Ubuntu%20OS%20Setup.md)
   - Initial Setup
