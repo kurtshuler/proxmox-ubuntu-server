@@ -7,7 +7,12 @@
   - [Within the VM: Set up the mount point and mount the USB drive partition](#within-the-vm-set-up-the-mount-point-and-ount-the-usb-drive-partition)
   - [Within the VM:  Set up `fstab` so passed-through drive will mount on boot](#within-the-vm--set-up-fstab-so-passed-through-drive-will-mount-on-boot)
 ----
-> **NOTE:** Do these steps AFTER you have created the Ubuntu VM!
+>
+> **NOTE 1:** Do these steps AFTER you have created the Ubuntu VM!
+>
+> **NOTE 2:** I have had issues with the Ubuntu VM not seeing the drive on but. I resolve these by mounting manually after safe boot and re-editing `fstab`.
+>>
+
 
 # Within the Proxmox node (`pve`):
 ## Pass through from Proxmox node to VM
