@@ -2,8 +2,6 @@
 ===================================================
 
 # Contents
-- [4 - Create Proxmox Virtual Disk for Ubuntu VM](#4---create-proxmox-virtual-disk-for-ubuntu-vm)
-- [Contents](#contents)
 - [Within the Proxmox GUI VM setup page](#within-the-proxmox-gui-vm-setup-page)
 - [Within the VM shell](#within-the-vm-shell)
   - [Partition the new disk using the `fdisk` command](#partition-the-new-disk-using-the-fdisk-command)
