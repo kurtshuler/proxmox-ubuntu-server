@@ -10,7 +10,7 @@
 >
 > **NOTE 1:** Do these steps AFTER you have created the Ubuntu VM!
 >
-> **NOTE 2:** I have had issues with the Ubuntu VM not seeing the drive on but. I resolve these by mounting manually after safe boot and re-editing `fstab`.
+> **NOTE 2:** I have had issues with the Ubuntu VM not seeing the drive on boot. I resolve these by mounting manually after safe boot and re-editing `fstab`.
 >>
 
 
