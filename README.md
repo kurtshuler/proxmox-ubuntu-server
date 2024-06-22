@@ -1,5 +1,5 @@
 # Set up Proxmox and Ubuntu 24.04 VM from scratch
-This repository describes how to build a Proxmox server from scratch and create an Ubuntu VM with virtual SCSI drive and a passed-through USB drive. This system is the basis for a docker host to run the udms, Ultimate Docker Media Server, as described by Anand on his https://www.smarthomebeginner.com website.
+This repository describes how to build a Proxmox server from scratch and create an Ubuntu VM with a virtual SCSI drive and a passed-through USB drive. This system is the basis for a docker host to run the udms, Ultimate Docker Media Server, as described by Anand on his https://www.smarthomebeginner.com website.
 
 ### [1 - Proxmox Setup](1%20-%20Proxmox%20Setup.md)
   - Make a bootable USB with OS images and tools using Ventoy
