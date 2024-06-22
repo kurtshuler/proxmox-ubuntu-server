@@ -31,12 +31,12 @@
 ## Partition the new disk using the `fdisk` command
 
 1. List your drives:
-   ```
+   ```sh
    lsblk
    ```
 
 3. Create a partition for your drive:
-   ```
+   ```sh
    fdisk /dev/sdb
    ```
 
@@ -53,56 +53,56 @@
    `fstab` will then quit and send you back to the normal shell command line.
 
 9. Check the results:
-   ```
+   ```sh
    lsblk -o NAME,FSTYPE,SIZE,MOUNTPOINT
    ```
 
 ## Format the new disk using the `mkfs` command
 
 1. Format as `ext4`:
-   ```
+   ```sh
    mkfs.ext4 /dev/sdb1
    ```
 
 3. Check the results:
-   ```
+   ```sh
    lsblk -o NAME,FSTYPE,SIZE,MOUNTPOINT
    ```
 
 ## Mount the new disk using the `mount` command
 
 1. Make the mount point:
-   ```
+   ```sh
    mkdir /mnt/crucial
    ```
 
 3. Mount your partition to the mount point:
-   ```
+   ```sh
    mount /dev/sdb1 /mnt/crucial
    ```
 
 5. Verify the mount is correct:
-   ```
+   ```sh
    df -HT
    ```
 
 ## Update `/etc/fstab` file so the drive will always be mounted at boot time
 
 1. Open `fstab`:
-   ```
+   ```sh
    nano /etc/fstab
    ```
 
 3. Append this line:
-   ```
+   ```EditorConfig
    /dev/sdb1               /mnt/crucial          ext4    defaults 0 2
    ```
 
 5. Reboot and check
-   ```
+   ```sh
    reboot
    ```
-   ```
+   ```sh
    lsblk -o NAME,FSTYPE,SIZE,MOUNTPOINT
    ```
    ```
