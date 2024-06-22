@@ -31,54 +31,82 @@
 ## Partition the new disk using the `fdisk` command
 
 1. List your drives:
-   ```lsblk```
+   ```
+   lsblk
+   ```
 
-2. Create a partition for your drive:
-   ```fdisk /dev/sdb```
+3. Create a partition for your drive:
+   ```
+   fdisk /dev/sdb
+   ```
 
-3. Within the 'fstab' console, type:
-   ```n```
+5. Within the 'fstab' console, type:
+   ```
+   n
+   ```
    …then `<Enter>` for all defaults.
 
-4. Within the 'fstab' console, write the partition changes to disk:
-   ```w```
+7. Within the 'fstab' console, write the partition changes to disk:
+   ```
+   w
+   ```
    `fstab` will then quit and send you back to the normal shell command line.
 
-5. Check the results:
-   ```lsblk -o NAME,FSTYPE,SIZE,MOUNTPOINT```
+9. Check the results:
+   ```
+   lsblk -o NAME,FSTYPE,SIZE,MOUNTPOINT
+   ```
 
 ## Format the new disk using the `mkfs` command
 
 1. Format as `ext4`:
-   ```mkfs.ext4 /dev/sdb1```
+   ```
+   mkfs.ext4 /dev/sdb1
+   ```
 
-2. Check the results:
-   ```lsblk -o NAME,FSTYPE,SIZE,MOUNTPOINT```
+3. Check the results:
+   ```
+   lsblk -o NAME,FSTYPE,SIZE,MOUNTPOINT
+   ```
 
 ## Mount the new disk using the `mount` command
 
 1. Make the mount point:
-   ```mkdir /mnt/crucial```
+   ```
+   mkdir /mnt/crucial
+   ```
 
-2. Mount your partition to the mount point:
-   ```mount /dev/sdb1 /mnt/crucial```
+3. Mount your partition to the mount point:
+   ```
+   mount /dev/sdb1 /mnt/crucial
+   ```
 
-3. Verify the mount is correct:
-   ```df -HT```
+5. Verify the mount is correct:
+   ```
+   df -HT
+   ```
 
 ## Update `/etc/fstab` file so the drive will always be mounted at boot time
 
 1. Open `fstab`:
-   ```nano /etc/fstab```
+   ```
+   nano /etc/fstab
+   ```
 
-2. Append this line:
-   ```/dev/sdb1               /mnt/crucial          ext4    defaults 0 2```
+3. Append this line:
+   ```
+   /dev/sdb1               /mnt/crucial          ext4    defaults 0 2
+   ```
 
-3. Reboot and check
-   ```reboot```
-   ```lsblk -o NAME,FSTYPE,SIZE,MOUNTPOINT```
-     ```df -HT```
-
+5. Reboot and check
+   ```
+   reboot
+   ```
+   ```
+   lsblk -o NAME,FSTYPE,SIZE,MOUNTPOINT
+   ```
+   ```
+   df -HT
    ```
 # Next Steps
 
