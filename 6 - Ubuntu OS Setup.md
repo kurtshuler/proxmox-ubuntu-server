@@ -1,4 +1,4 @@
-# 5 - Ubuntu OS setup
+# 6 - Ubuntu OS setup
 
 ## Contents
   - [Initial Setup](#initial-setup)
