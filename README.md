@@ -8,18 +8,21 @@ Here is a summary of the contents with direct links to the markdown docs in this
   - Proxmox post-install setup
   - Set up the Proxmox terminal
   - Configure Proxmox alerts
-## [2 - Ubuntu VM Setup](2%20-%20Ubuntu%20VM%20Setup.md)
+## [2 - Ubuntu VM installation within Proxmox](2%20-%20Ubuntu%20VM%20Installation%20within%20Proxmox.md)
   - Run Tteck Ubuntu 24.04 script
   - Setup Cloud-Init on Proxmox
   - Start the VM
-## [3 - USB Drive Passthrough to Proxmox VM](3%20-%20USB%20%20Drive%20Passthrough%20to%20Proxmox%20VM.md)
+## [3 - iGPU Hardware Passthrough Setup](3%20-%20iGPU%20Hardware%20Passthrough%20Setup.md)
+  - Within the Proxmox Host
+  - In Proxmox GUI, add GPU to VM PCI devices
+## [4 - USB Drive Passthrough to Ubuntu VM in Proxmox](4%20-%20USB%20Drive%20Hardware%20Passthrough%20Setup.md)
   - Within Proxmox Node: Pass through from Proxmox node to VM
-  - Within the VM: Set up the mount point and mount the USB drive partition
-  - Within the VM: Set up fstab so passed-through drive will mount on boot
+  - Within Proxmox GUI VM setup page: Verify your drive is passed through and turn off backup
+  - Within the running Ubuntu VM: Mount the passed-through drive and add it to up fstab
 
-## [4 - Ubuntu OS setup](4%20-%20Ubuntu%20OS%20Setup.md)
+## [5 - Ubuntu OS setup](5%20-%20Ubuntu%20OS%20Setup.md)
   - Initial Setup
   - Change SSH port to 2053
-  - Set up the Ubuntu terminal
+  - Set up the Ubuntu terminal - OMB, aliases and iTerm2
   - Make server tweaks
   - Enable UFW firewall
