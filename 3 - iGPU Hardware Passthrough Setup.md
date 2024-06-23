@@ -109,6 +109,7 @@ echo "options vfio_iommu_type1 allow_unsafe_interrupts=1" > /etc/modprobe.d/iomm
 
 2. Edit `/etc/modprobe.d/blacklist.conf`
 ```sh
+echo "blacklist i915" >> /etc/modprobe.d/blacklist.conf
 echo "blacklist nouveau" >> /etc/modprobe.d/blacklist.conf
 echo "blacklist nvidia" >> /etc/modprobe.d/blacklist.conf
 ```
