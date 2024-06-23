@@ -182,7 +182,7 @@ Then click the following:
 ```yaml
 All Functions: YES
 ROM-Bar: YES
-Primary GPU: NO
+Primary GPU: YES
 PCI-Express: YES (requires 'machine: q35' in VM config file)
 ```
    ![images](images/iGPU-passthrough-add-pci-device-button-screen.png)
