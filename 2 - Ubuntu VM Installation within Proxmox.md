@@ -24,13 +24,18 @@ bash -c "$(wget -qLO - https://github.com/tteck/Proxmox/raw/main/vm/ubuntu2404-v
 ```diff
 - ⬆ WARNING: Do NOT start the VM until after you do the following Cloud-Init setup steps linked above! ⬆
 ```
-For the steps above, STOP at the Install Docker step. We will do that later.
+For the steps above, **STOP at the Install Docker step**. We will do that later!
 
+```diff
+- ⬇ WARNING: Be sure to do this step or iGPU HW passthrough from Proxmox to your new VM will not work! ⬇
+```
 ## In VM terminal, install files required for iGPU hardware passthrough
 ```sh
 sudo apt install sudo linux-generic
 ```
-
+```diff
+- ⬆ WARNING: Be sure to do this step or iGPU HW passthrough from Proxmox to your new VM will not work!  ⬆
+```
 ## Next Steps
 
 ~~[1 - Set up Proxmox from scratch](1%20-%20Proxmox%20Setup.md)~~
