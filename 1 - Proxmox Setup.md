@@ -1,17 +1,22 @@
 # 1 - Set up Proxmox from scratch
 
-## Contents
-  - [Make a bootable USB with OS images and tools using Ventoy](#make-a-bootable-usb-with-os-images-and-tools-using-ventoy)
-  - [Proxmox post-install setup](#proxmox-post-install-setup)
-  - [Set up the Proxmox terminal](#set-up-the-proxmox-terminal)
-  - [Configure Proxmox alerts](#configure-proxmox-alerts)
-----
-# Make a bootable USB with OS images and tools using Ventoy
-1. Latest Ventoy installers at https://sourceforge.net/projects/ventoy/files/
-  
-   It is Linux or Windows only. For Mac, use Parallels Windows or Linux.
+Contents
+<!-- TOC tocDepth:2..2 chapterDepth:2..6 -->
+
+- [1. Make a bootable USB with OS images and tools using Ventoy](#1-make-a-bootable-usb-with-os-images-and-tools-using-ventoy)
+- [2. Proxmox post-install setup](#2-proxmox-post-install-setup)
+- [3. Set up the Proxmox terminal](#3-set-up-the-proxmox-terminal)
+- [4. Configure Proxmox alerts](#4-configure-proxmox-alerts)
+- [5. Set up iGPU passthrough in Proxmox Host (VM steps done in Ubuntu OS checklist)](#5-set-up-igpu-passthrough-in-proxmox-host-vm-steps-done-in-ubuntu-os-checklist)
+
+<!-- /TOC -->
+-----------------
+## 1. Make a bootable USB with OS images and tools using Ventoy
+Latest Ventoy installers are at https://sourceforge.net/projects/ventoy/files/
+
+Ventoy is Linux or Windows only. For Mac, use Parallels Windows or Linux.
    
-4. ISO images at:
+Important ISO images:
    | ISO | URL |
    |-----|-----|
    | System Rescue ISO | https://www.system-rescue.org/Download/ |
@@ -20,19 +25,20 @@
    | Ubuntu Server Cloud-Init Install ISO | https://cloud-images.ubuntu.com/noble/current/ |
    | Ubuntu DESKTOP ISO | https://ubuntu.com/download/desktop/ |
 
-# Proxmox post-install setup
-## Check that SSH is running
+## 2. Proxmox post-install setup
+### 2.1. Check that SSH is running
 ```shell-script
 systemctl status ssh.service
 ```
-## Run TTeck Proxmox VE Helper-Scripts at https://helper-scripts.com/scripts?id=Proxmox+VE+Post+Install
-> Run Tteck scripts from Proxmox GUI shell, not SSH!
+### 2.2. Run tteck's Proxmox VE Helper-Scripts at https://helper-scripts.com/scripts?id=Proxmox+VE+Post+Install
+> Run tteck scripts from Proxmox GUI shell, not SSH!
 ```shell-script
 bash -c "$(wget -qLO - https://github.com/tteck/Proxmox/raw/main/misc/post-pve-install.sh)"
 ```
-## Set up IKoolcore-specific Proxmox summary 
+### 2.3. Set up IKoolcore-specific Proxmox summary
 Follow steps in iKoolcore R2 wiki at https://github.com/KoolCore/Proxmox_VE_Status
-- Add iKoolcore R2 hardware stats to Proxmox summary page by running shell script at https://github.com/KoolCore/Proxmox_VE_Status
+
+-  Add iKoolcore R2 hardware stats to the Proxmox summary page by running this shell script that I modified https://github.com/kurtshuler/proxmox-ubuntu-server/blob/main/Proxmox%20files/Proxmox_VE_Status_zh.sh
 > NOTE: You may need to run `bash ./Proxmox_VE_Status_zh.sh` first, and then run `bash ./Proxmox_VE_Status_en.sh` to display sensor data in the Proxmox pve summary page.
 ```sh
 cd Proxmox_VE_Status
@@ -40,12 +46,9 @@ cd Proxmox_VE_Status
 ```sh
 bash ./Proxmox_VE_Status_zh.sh
 ```
-```sh
-bash ./Proxmox_VE_Status_en.sh
-```
 
-## Run TTeck Proxmox VE Processor Microcode script at https://helper-scripts.com/scripts?id=Proxmox+VE+Processor+Microcode
-> Run Tteck scripts from Proxmox *GUI* shell, not SSH!
+### 2.4. Run tteck's Proxmox VE Processor Microcode script at https://helper-scripts.com/scripts?id=Proxmox+VE+Processor+Microcode
+> Run tteck scripts from the Proxmox *GUI* shell, not SSH!
 ```shell-script
 bash -c "$(wget -qLO - https://github.com/tteck/Proxmox/raw/main/misc/microcode.sh)"
 ```
@@ -54,12 +57,12 @@ Reboot
 reboot
 ```
 
-# Set up the Proxmox terminal
-## Install neofetch
+## 3. Set up the Proxmox terminal
+### 3.1. Install neofetch
 ```shell
 sudo apt install neofetch
 ```
-## Install Oh My Bash
+### 3.2. Install Oh My Bash
 ```shell
 bash -c "$(curl -fsSL https://raw.githubusercontent.com/ohmybash/oh-my-bash/master/tools/install.sh)"
 ```
@@ -71,7 +74,7 @@ source ~/.bashrc
 > ```shell
 > export OSH='/root/.oh-my-bash'
 > ```
-## Add plugins and completions to `.bashrc`
+### 3.3. Add plugins and completions to `.bashrc`
 Edit `.bashrc` by copying and comparing to GitHub Proxmox [`.bashrc`](/Proxmox%20files/.bashrc)
 ```shell
 nano .bashrc
@@ -81,10 +84,10 @@ Reload `.bashrc`
 source ~/.bashrc
 ```
 
-## Install iTerm shell integration:
+### 3.4. Install iTerm shell integration:
 In iTerm 2 GUI, click on `iTerm2 → Iterm Shell Integration`
 
-# Configure Proxmox alerts
+## 4. Configure Proxmox alerts
 This guide is adapted from Techno Tim's [Set up alerts in Proxmox before it's too late!](https://technotim.live/posts/proxmox-alerts/) article.
 
 Install dependencies
@@ -92,10 +95,10 @@ Install dependencies
 apt update
 apt install -y libsasl2-modules mailutils
 ```
-Configure app passwords on your Google account
+### 4.1. Configure app passwords on your Google account
 https://myaccount.google.com/apppasswords
 
-Configure postfix
+### 4.2. Configure postfix
 ```shell
 echo "smtp.gmail.com your-email@gmail.com:YourAppPassword" > /etc/postfix/sasl_passwd
 ```
@@ -143,7 +146,7 @@ Send a test email
 ```shell
 echo "This is a test message sent from postfix on my Proxmox Server" | mail -s "Test Email from Proxmox" shulerpve1@gmail.com
 ```
-## Fix the "from" name in email
+### 4.3. Fix the "from" name in email
 
 Install dependency
 ```shell
@@ -182,6 +185,159 @@ Send another  test email
 ```shell
 echo "This is a second test message sent from postfix on my Proxmox Server" | mail -s "Second Test Email from Proxmox" shulerpve1@gmail.com
 ```
+## 5. Set up iGPU passthrough in Proxmox Host (VM steps done in Ubuntu OS checklist)
+
+### 5.1. Make IOMMU changes at boot
+>**NOTE:** There are two possible boot systems, Systemd (EFI) or Grub.
+>
+>**NOTE:** The **'Boot Mode'** in the Proxmox GUI summary page for a node (like `pve`) indicates whether it is EFI (systemd) or Grub booted.
+
+I chose to do both the Grub and EFI steps below.
+
+#### 5.1.1. For Grub boot, edit `/etc/default/grub`
+- Open `/etc/default/grub`
+``` sh
+nano /etc/default/grub
+```
+- Change this line to:
+```EditorConfig
+GRUB_CMDLINE_LINUX_DEFAULT="quiet intel_iommu=on iommu=pt"
+```
+- Save file and close
+
+- Run:
+```sh
+update-grub
+```
+#### 5.1.2. For Systemd (EFI) boot, edit `/etc/kernel/cmdline`
+> **NOTE:** These steps are for EFI boot systems.
+
+- Open `/etc/kernel/cmdline`
+```sh
+nano /etc/kernel/cmdline
+```
+- Add this to first line:
+
+>**NOTE** All commands in `/etc/kernel/cmdline` must be in a **single line** on the **first line!**
+```EditorConfig
+intel_iommu=on iommu=pt
+```
+- Save file and close
+
+- Run:
+```sh
+proxmox-boot-tool refresh
+```
+### 5.2. Load VFIO modules at boot
+- Open `/etc/modules`
+```sh
+nano /etc/modules
+```
+
+- Add these lines:
+```
+vfio
+vfio_iommu_type1
+vfio_pci
+```
+
+- Save file and close
+
+### 5.3. Configure VFIO for PCIe Passthrough
+
+#### 5.3.1. Find your GPU PCI identifier
+   
+   It will be something like `00:02`
+```sh
+lspci
+```
+
+#### 5.3.2. Find your GPU's PCI HEX values
+
+   Enter the PCI identifier (`00:02`) from above into the `lspci` command: 
+```
+lspci -n -s 00:02 -v
+```
+You will see an associated HEX value like `8086:46d0`
+
+#### 5.3.3. Edit `/etc/modprobe.d/vfio.conf`
+
+   Copy the HEX values from your GPU into this command and hit enter:
+```sh
+echo "options vfio-pci ids=8086:46d0 disable_vga=1"> /etc/modprobe.d/vfio.conf
+```
+
+#### 5.3.4. Apply all changes
+```sh
+update-initramfs -u -k all
+```
+
+### 5.4. Blacklist Proxmox host device drivers
+
+This ensures nothing else on Proxmox can use the GPU that you want to pass through to a VM.
+
+#### 5.4.1. Edit `/etc/modprobe.d/iommu_unsafe_interrupts.conf`
+```sh
+echo "options vfio_iommu_type1 allow_unsafe_interrupts=1" > /etc/modprobe.d/iommu_unsafe_interrupts.conf
+```
+
+#### 5.4.2. Edit `/etc/modprobe.d/blacklist.conf`
+```sh
+echo "blacklist i915" >> /etc/modprobe.d/blacklist.conf
+echo "blacklist nouveau" >> /etc/modprobe.d/blacklist.conf
+echo "blacklist nvidia" >> /etc/modprobe.d/blacklist.conf
+```
+
+#### 5.4.3. Apply all changes
+```sh
+update-initramfs -u -k all
+```
+
+#### 5.4.4. Reboot to apply all changes
+```sh
+reboot
+```
+
+### 5.5. Verify all changes
+
+- Verify `vfio-pci` kernel driver being used:
+```sh
+lspci -n -s 00:02 -v
+```
+
+   In the output, you should see: 
+   ```yaml
+   Kernel driver in use: vfio-pci
+   ```
+- Verify IOMMU is enabled:
+```shell-script
+dmesg | grep -e DMAR -e IOMMU
+```
+   In the output, you should see: 
+   ```yaml
+   DMAR: IOMMU enabled
+   ```
+- Verify IOMMU interrupt remapping is enabled:
+```shell-script
+dmesg | grep 'remapping'
+```
+   In the output, you should see something like: 
+   ```yaml
+   DMAR-IR: Enabled IRQ remapping in x2apic mode
+   ```
+- 5.5.4. Verify that Proxmox recognizes the GPU:
+```shell-script
+lspci -v | grep -e VGA
+```
+   In the output, you should see something like: 
+   ```yaml
+   00:02.0 VGA compatible controller: Intel Corporation Alder Lake-N [UHD Graphics] (prog-if 00 [VGA controller])
+```
+- To get more details about your GPU VGA controller:
+```shell-script
+lspci -v -s 00:02.0
+```
+   
 
 # Next Steps
 
@@ -195,3 +351,6 @@ echo "This is a second test message sent from postfix on my Proxmox Server" | ma
 
 [5 - Ubuntu OS setup](5%20-%20Ubuntu%20OS%20Setup.md)
 
+
+
+[def]: #configure-proxmox-alerts
