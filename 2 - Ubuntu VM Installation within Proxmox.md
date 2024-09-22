@@ -26,10 +26,11 @@ bash -c "$(wget -qLO - https://github.com/tteck/Proxmox/raw/main/vm/ubuntu2404-v
 ```
 For the steps above, **STOP at the Install Docker step**. We will do that later!
 
+
+## In VM terminal, install files required for iGPU hardware passthrough
 ```diff
 - ⬇ WARNING: Be sure to do this step or iGPU HW passthrough from Proxmox to your new VM will not work! ⬇
 ```
-## In VM terminal, install files required for iGPU hardware passthrough
 ```sh
 sudo apt install sudo linux-generic
 ```
