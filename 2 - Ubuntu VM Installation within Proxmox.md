@@ -2,29 +2,26 @@
 ==========================================
 There are (2) methods to install Ubuntu Server OS and I prefer the Cloud-Init Server install over the manual Server Live ISO install.
 
-# Cloud-Init Server install using Tteck Proxmox VE Helper script
+# Cloud-Init Server install using tteck's Proxmox VE Helper script
 
->**NOTE** For iGPU passthrough, the required files in `linux-generic` are NOT part of the Ubuntu Cloud-Init distribution used by the Tteck Ubuntu installation script. That means we have to remember to load them using `sudo apt install sudo linux-generic` after starting the VM for the first time.
+>**NOTE** For iGPU passthrough, the required files in `linux-generic` ***are NOT part of the Ubuntu Cloud-Init distribution*** used by the tteck Ubuntu installation script. That means we have to ***remember to load them*** using `sudo apt install sudo linux-generic` after starting the VM for the first time.
 
 ## 
-Run Tteck Ubuntu 24.04 script at https://helper-scripts.com/scripts?id=Ubuntu+24.04
-> NOTE: Run TTeck scripts from Proxmox GUI shell, not SSH!
+Run tteck's Ubuntu 24.04 script at https://helper-scripts.com/scripts?id=Ubuntu+24.04
+> NOTE: Run tteck scripts from the **Proxmox GUI shell**, not SSH!
 ```shell-script
 bash -c "$(wget -qLO - https://github.com/tteck/Proxmox/raw/main/vm/ubuntu2404-vm.sh)"
 ```
-## Setup Cloud-Init on Proxmox
-> **WARNING:** Do NOT start the VM until after you do the following Cloud-Init setup steps!
+## Setup Cloud-Init data and Resize Disks in Proxmox
 
 ```diff
 - ⬇ WARNING: Do NOT start the VM until after you do the following Cloud-Init setup steps linked below! ⬇
 ```
-
-Follow the detailed instructions at https://github.com/tteck/Proxmox/discussions/2072 
-
+Follow tteck's detailed **Cloud-Init setup** instructions at [https://github.com/tteck/Proxmox/discussions/2072](https://github.com/tteck/Proxmox/discussions/2072)
 ```diff
-- ⬆ WARNING: Do NOT start the VM until after you do the following Cloud-Init setup steps linked above! ⬆
+- ⬆ WARNING: Do NOT start the VM until after you do the following **Cloud-Init setup** steps linked above! ⬆
 ```
-After the steps above, **STOP at TTeck's "Install Docker" step**. We will do that later!
+After the steps above, **STOP at tteck's "Install Docker" step**. We will do that later!
 
 
 ## In VM terminal, install files required for iGPU hardware passthrough
