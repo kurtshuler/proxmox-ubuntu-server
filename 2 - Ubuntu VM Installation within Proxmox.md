@@ -47,7 +47,7 @@ sudo apt install sudo linux-generic
 # Manual Install Method: Server Live ISO install
 
 ## Upload the Live Install ISO to Proxmox
-1. In the Promox GUI, got to `pve --> local (pve) --> ISO Images` and click `Download from URL`
+1. In the Promox GUI, go to `pve --> local (pve) --> ISO Images` and click `Download from URL`
 2. Enter this URL in the `URL:` field
    
    `https://releases.ubuntu.com/24.04/ubuntu-24.04-live-server-amd64.iso`
