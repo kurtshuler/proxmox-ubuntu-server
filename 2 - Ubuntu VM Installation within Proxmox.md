@@ -50,7 +50,7 @@ sudo apt install sudo linux-generic
 1. In the Promox GUI, go to `pve --> local (pve) --> ISO Images` and click `Download from URL`
 2. Enter this URL in the `URL:` field
    
-   `[https://releases.ubuntu.com/24.04/ubuntu-24.04-live-server-amd64.iso](https://releases.ubuntu.com/24.04/ubuntu-24.04.1-live-server-amd64.iso)`
+   `https://releases.ubuntu.com/24.04/ubuntu-24.04.1-live-server-amd64.iso`
 3. Click the `Query URL` button
 4. Click the `Download` button
 
