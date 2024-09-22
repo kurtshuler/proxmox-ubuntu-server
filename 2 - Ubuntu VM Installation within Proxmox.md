@@ -82,7 +82,7 @@ Choose your ISO image.
    `BIOS: OVMF (UEFI)`
    `Add EFI Disk: YES`
    `EFI Storage: local-lvm`
-   `SCSI COntroller: VirtIO SCSI single`
+   `SCSI Controller: VirtIO SCSI single`
    `Qemu Agent: YES`
 
 ```
@@ -94,7 +94,7 @@ Choose your ISO image.
    `Storage: local-lvm`
    `Disk size (GiB): 128`
    `Discard: YES`
-   `SSD emeulation: YES`
+   `SSD emulation: YES`
    `Backup: YES`
 ```
    ![images](images/VM-settings-disks.png)
