@@ -33,13 +33,13 @@ systemctl status ssh.service
 ### 2.2. Run tteck's Proxmox VE Post Install Script
 > tteck's Helper-Scripts are at https://tteck.github.io/Proxmox/
 ```diff
-- Run tteck scripts from the **Proxmox GUI shell**, not SSH!
+- WARNING: Run tteck scripts from the **Proxmox GUI shell**, not SSH!
 ```
 ```shell-script
 bash -c "$(wget -qLO - https://github.com/tteck/Proxmox/raw/main/misc/post-pve-install.sh)"
 ```
 ### 2.3. Set up IKoolcore-specific Proxmox summary
-> Follow steps in iKoolcore R2 wiki at https://github.com/KoolCore/Proxmox_VE_Status
+> Follow the steps in the iKoolcore R2 wiki at https://github.com/KoolCore/Proxmox_VE_Status
 >
 > Add iKoolcore R2 hardware stats to the Proxmox summary page by running this shell script that I modified https://github.com/kurtshuler/proxmox-ubuntu-server/blob/main/Proxmox%20files/Proxmox_VE_Status_zh.sh
 ```sh
@@ -52,7 +52,7 @@ bash ./Proxmox_VE_Status_zh.sh
 ### 2.4. Run tteck's Proxmox VE Processor Microcode Script
 > tteck's Helper-Scripts are at https://tteck.github.io/Proxmox/
 ```diff
-- Run tteck scripts from the **Proxmox GUI shell**, not SSH!
+- WARNING: Run tteck scripts from the **Proxmox GUI shell**, not SSH!
 ```
 ```shell-script
 bash -c "$(wget -qLO - https://github.com/tteck/Proxmox/raw/main/misc/microcode.sh)"
