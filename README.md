@@ -6,6 +6,7 @@ This repository describes how to build a Proxmox server from scratch and create 
   - Proxmox post-install setup
   - Set up the Proxmox terminal
   - Configure Proxmox alerts
+  - Set up iGPU passthrough (within Proxmox node, not VMs)
 ### [2 - Ubuntu VM installation within Proxmox](2%20-%20Ubuntu%20VM%20Installation%20within%20Proxmox.md)
   - Run Tteck Ubuntu 24.04 script
   - Setup Cloud-Init on Proxmox
