@@ -30,7 +30,7 @@ bash -c "$(wget -qLO - https://github.com/tteck/Proxmox/raw/main/vm/ubuntu2404-v
 > 3. Set to `No` (not enough storage, yet)
 > 4. Set network settings (IP/CIDR and gateway)
 > 5. Click `Regenerate Image`
-> <img src="https://github.com/kurtshuler/proxmox-ubuntu-server/blob/main/images/VM-settings-Cloud-Init-details2.png" width="500"/>
+> <img src="https://github.com/kurtshuler/proxmox-ubuntu-server/blob/main/images/VM-settings-Cloud-Init-details3.png" width="500"/>
 #### It is now OK to click `▶ Start` to start the VM!
 ### Resize the Bootdisk `(/dev/sda)`
 
