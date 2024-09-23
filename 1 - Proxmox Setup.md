@@ -192,14 +192,16 @@ postfix reload
 ```shell
 echo "This is a second test message sent from postfix on my Proxmox Server" | mail -s "Second Test Email from Proxmox" shulerpve1@gmail.com
 ```
-## 5. Set up iGPU passthrough in Proxmox Host (VM steps done in Ubuntu OS checklist)
-
+## 5. Set up iGPU passthrough in Proxmox Host
+>
+> **NOTE:** Additional steps are required in **each VM** to 
 ### 5.1. Make IOMMU changes at boot
 >**NOTE:** There are two possible boot systems, Systemd (EFI) or Grub.
 >
 >**NOTE:** The **'Boot Mode'** in the Proxmox GUI summary page for a node (like `pve`) indicates whether it is EFI (systemd) or Grub booted.
-
-I chose to do both the Grub and EFI steps below.
+>
+> According to the [Proxmox manual](https://pve.proxmox.com/pve-docs/pve-admin-guide.html#sysboot): "For EFI Systems installed with ZFS as the root filesystem ```systemd-boot`` is used, unless Secure Boot is enabled. All other deployments use the standard GRUB bootloader (this usually also applies to systems which are installed on top of Debian).
+". If you did not install Proxmox on ZFS, it's normal that GRUB is used for booting in UEFI mode and you will use the first method below.
 
 #### 5.1.1. For Grub boot, edit `/etc/default/grub`
 > Open `/etc/default/grub`
