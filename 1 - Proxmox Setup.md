@@ -9,10 +9,12 @@
 
 <!-- /TOC -->
 -----------------
-## 1. Make a bootable USB with OS images and tools using Ventoy
+## 1. Make a bootable USB drive with OS images and tools using Ventoy
 > Latest Ventoy installers are at https://sourceforge.net/projects/ventoy/files/
 > 
-> Ventoy is Linux or Windows only. For Mac, use Parallels Windows or Linux.
+> ➡️ Ventoy USB can be created in Linux or Windows only. For Mac, use Parallels Windows VM or Linux VM.
+>
+> After you have created the Ventoy USB, you can copy files to it using your Mac or PC.
    
 Important ISO images:
    | ISO | URL |
