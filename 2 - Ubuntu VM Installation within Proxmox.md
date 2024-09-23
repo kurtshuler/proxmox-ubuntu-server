@@ -175,9 +175,8 @@ reboot
 
 
 ### 3.1. In Proxmox GUI, set up PCI Device
-```
-pve —> [VM#] —> Hardware —> Add —> PCI Device
-```
+>Click on `pve` → `###` → `Hardware` → `Add` → `PCI Device` 
+
 > <img src="https://github.com/kurtshuler/proxmox-ubuntu-server/blob/main/images/iGPU-passthrough-add-pci-device-button.png" width="500"/>
    
 ### 3.2. In the `Add: PCI Device` popup, select
@@ -198,7 +197,8 @@ PCI-Express: YES (requires 'machine: q35' in VM config file)
 > <img src="https://github.com/kurtshuler/proxmox-ubuntu-server/blob/main/images/iGPU-passthrough-add-pci-device-check.png" width="500"/>
 
 ### 3.4. Turn off `Display`
-Click on `Display`, then `Edit`, and set `Graphic Card` to `none`, and press OK.
+> Click on `Hardware` → `Display` → `Edit`, and set `Graphic Card` to `none`, and press `OK.`
+> 
 >**NOTE:** This will mean that the `>_ Console` in the GUI middle menu will no longer work. You must use the `xterm.js` console or `ssh`.
 
 ### 3.5. Reboot VM and verify
@@ -207,15 +207,15 @@ lspci -k | grep VGA
 lspci -n -s 01:00 -v
 ```
 ### 3.6. Reboot and verify iGPU hardware passthough is working in the Ubuntu VM
-Check to see if your VGA adapter is available
+> Check to see if your VGA adapter is available
 ```sh
 lspci -nnv | grep VGA
 ```
-Check to confirm `Kernel driver in use: i915`:
+> Check to confirm `Kernel driver in use: i915`:
 ```sh
 lspci -n -s 01:00 -v
 ```
-Check to see that you have `renderD128` in `/dev/dri`
+> Check to see that you have `renderD128` in `/dev/dri`
 ```sh
 ls -l /dev/dri/by-path/
 ```
