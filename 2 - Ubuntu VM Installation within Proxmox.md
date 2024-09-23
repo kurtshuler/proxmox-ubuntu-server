@@ -36,7 +36,7 @@ bash -c "$(wget -qLO - https://github.com/tteck/Proxmox/raw/main/vm/ubuntu2404-v
 
 > 1. Select `xterm.js` under the `Console` pull down for copy/paste functions
 > 2. Click `Hardware > Hard Disk (scsi0) > Disk Action > Resize`
-> <img src="https://github.com/kurtshuler/proxmox-ubuntu-server/blob/main/images/VM-settings-harddisk-resize.png" width="500"/>
+> <img src="https://github.com/kurtshuler/proxmox-ubuntu-server/blob/main/images/VM-settings-harddisk-resize2.png" width="500"/>
 > 3. Expand VM Disk using parted (/dev/sda1)
 > 5. 
 
