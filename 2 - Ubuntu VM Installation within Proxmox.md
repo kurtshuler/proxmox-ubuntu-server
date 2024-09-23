@@ -1,23 +1,9 @@
 # 2 - Ubuntu VM installation within Proxmox
-<!-- TOC tocDepth:2..3 chapterDepth:2..6 -->
+<!-- TOC tocDepth:2..2 chapterDepth:2..6 -->
 
 - [1. Cloud-Init Server install using tteck's Proxmox VE Helper script](#1-cloud-init-server-install-using-ttecks-proxmox-ve-helper-script)
-    - [1.1. Run tteck's Ubuntu 24.04 installtion script](#11-run-ttecks-ubuntu-2404-installtion-script)
-    - [1.2. Setup Cloud-Init data](#12-setup-cloud-init-data)
-    - [1.3. Resize the Bootdisk `(/dev/sda)`](#13-resize-the-bootdisk-devsda)
-    - [1.4. Enable SSH](#14-enable-ssh)
-    - [1.5. Add QEMU Guest Agent](#15-add-qemu-guest-agent)
-    - [1.6. Install files required for iGPU hardware passthrough](#16-install-files-required-for-igpu-hardware-passthrough)
 - [2. Manual Install Method: Server Live ISO install](#2-manual-install-method-server-live-iso-install)
-    - [2.1. Upload the Live Install ISO to Proxmox](#21-upload-the-live-install-iso-to-proxmox)
-    - [2.2. Set up the VM](#22-set-up-the-vm)
 - [3. iGPU Passthrough: Add GPU to VM PCI devices](#3-igpu-passthrough-add-gpu-to-vm-pci-devices)
-    - [3.1. In Proxmox GUI, set up PCI Device](#31-in-proxmox-gui-set-up-pci-device)
-    - [3.2. In the `Add: PCI Device` popup, select](#32-in-the-add-pci-device-popup-select)
-    - [3.3. Check the results](#33-check-the-results)
-    - [3.4. Turn off `Display`](#34-turn-off-display)
-    - [3.5. Reboot VM and verify](#35-reboot-vm-and-verify)
-    - [3.6. Reboot and verify iGPU hardware passthough is working in the Ubuntu VM](#36-reboot-and-verify-igpu-hardware-passthough-is-working-in-the-ubuntu-vm)
 - [4. Next Steps](#4-next-steps)
 
 <!-- /TOC -->
