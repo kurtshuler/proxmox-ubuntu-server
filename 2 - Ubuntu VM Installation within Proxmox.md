@@ -12,8 +12,6 @@ There are (2) methods to install Ubuntu Server OS and I prefer the Cloud-Init Se
 ```shell-script
 bash -c "$(wget -qLO - https://github.com/tteck/Proxmox/raw/main/vm/ubuntu2404-vm.sh)"
 ```
-### Setup Cloud-Init data and Resize Disks in Proxmox
-
 ```diff
 - ⬇ WARNING: Do NOT start the VM until after you do the following Cloud-Init setup steps linked below! ⬇
 ```
@@ -21,7 +19,9 @@ bash -c "$(wget -qLO - https://github.com/tteck/Proxmox/raw/main/vm/ubuntu2404-v
 
 > ➡️ After the steps above, **STOP at tteck's "Install Docker" step**. We will do that later!
 >
-> tteck's Ubuntu Cloud-Init steps are copied here below for your convenience.
+> tteck's Ubuntu Cloud-Init steps are copied below for your convenience.
+### Setup Cloud-Init data
+
 #### Click on `Cloud-Init` in the VM's vertical middle menu bar
 > <img src="https://github.com/kurtshuler/proxmox-ubuntu-server/blob/main/images/VM-settings-Cloud-Init.png" width="500"/>
 #### Fill in the `Cloud-Init` settings
@@ -31,6 +31,15 @@ bash -c "$(wget -qLO - https://github.com/tteck/Proxmox/raw/main/vm/ubuntu2404-v
 > 4. Set network settings (IP/CIDR and gateway)
 > 5. Click `Regenerate Image`
 > <img src="https://github.com/kurtshuler/proxmox-ubuntu-server/blob/main/images/VM-settings-Cloud-Init-details.png" width="500"/>
+#### It is now OK to click `▶ Start` to start the VM!
+### Resize the Bootdisk `(/dev/sda)`
+
+> 1. Select `xterm.js` under the `Console` pull down for copy/paste functions
+> 2. Click `Hardware > Hard Disk (scsi0) > Disk Action > Resize`
+> <img src="https://github.com/kurtshuler/proxmox-ubuntu-server/blob/main/images/VM-settings-harddisk-resize.png" width="500"/>
+> 3. Expand VM Disk using parted (/dev/sda1)
+> 5. 
+
 
 ### In VM terminal, install files required for iGPU hardware passthrough
 ```diff
