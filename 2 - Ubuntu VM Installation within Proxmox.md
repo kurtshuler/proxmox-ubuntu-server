@@ -37,16 +37,47 @@ bash -c "$(wget -qLO - https://github.com/tteck/Proxmox/raw/main/vm/ubuntu2404-v
 > 1. Select `xterm.js` under the `Console` pull down for copy/paste functions
 > 2. Click `Hardware > Hard Disk (scsi0) > Disk Action > Resize`
 > <img src="https://github.com/kurtshuler/proxmox-ubuntu-server/blob/main/images/VM-settings-harddisk-resize2.png" width="500"/>
-> 3. Expand VM Disk using parted (/dev/sda1)
-> 5. 
+>
+> 3. Expand the VM Disk using `parted`. Follow these steps in the `xterm.js` console:
+>
+>    Type: `parted /dev/sda`
+>
+>    (parted) `resizepart 1`
+>    
+>    Fix/Ignore? `Fix`
+>    
+>    Partition number? `1`
+>    
+>    Yes/No? `Yes`
+>    
+>    End? [2146MB]? `-0`
+>    
+>    (parted) `quit`
+>    
+```sh
+reboot
+```
 
-
-### In VM terminal, install files required for iGPU hardware passthrough
+### Enable SSH
+```shell
+sed -i -e 's/#PermitRootLogin prohibit-password/PermitRootLogin yes/g' -e 's/^PasswordAuthentication.*/PasswordAuthentication yes/' /etc/ssh/sshd_config
+rm /etc/ssh/sshd_config.d/60-cloudimg-settings.conf
+systemctl restart ssh
+```
+### Add QEMU Guest Agent
+```shell
+apt-get update && apt-get -y upgrade
+apt-get install -y qemu-guest-agent
+```
+### Install files required for iGPU hardware passthrough
 ```diff
 - ⬇ WARNING: Be sure to do this step or iGPU HW passthrough from Proxmox to your new VM will not work! ⬇
 ```
 ```sh
 sudo apt install sudo linux-generic
+```
+```sh
+reboot
 ```
 ## Manual Install Method: Server Live ISO install
 
@@ -134,13 +165,13 @@ sudo apt install sudo linux-generic
 >
 
 
-### In Proxmox GUI, click `PCI Device`
+### In Proxmox GUI, set up PCI Device
 ```
 pve —> [VM#] —> Hardware —> Add —> PCI Device
 ```
 > <img src="https://github.com/kurtshuler/proxmox-ubuntu-server/blob/main/images/iGPU-passthrough-add-pci-device-button.png" width="500"/>
    
-### In the popup, select
+### In the `Add: PCI Device` popup, select
 ```yaml
 Raw Device: YES
 Device: Select your GPU
@@ -157,16 +188,16 @@ PCI-Express: YES (requires 'machine: q35' in VM config file)
 ### Check the results
 > <img src="https://github.com/kurtshuler/proxmox-ubuntu-server/blob/main/images/iGPU-passthrough-add-pci-device-check.png" width="500"/>
 
-## Turn off `Display`
+### Turn off `Display`
 Click on "Display", then "Edit", and set "Graphic Card" to "none", and press OK.
->**NOTE:** This will mean that the "console" function on the left will no longer work, and the only way to get into your VM will be via SSH. I have tried dozens of options to get the console to keep working after adding the GPU, and nothing has worked, but SSH to the server still works just fine. Open to suggestions on how to get this to work long term)
+>**NOTE:** This will mean that the ">_ Console" in the GUI middle menu will no longer work. You must use the 'xterm.js` console or `ssh`.
 
-## Reboot VM and verify
+### Reboot VM and verify
 ```sh
 lspci -k | grep VGA
 lspci -n -s 01:00 -v
 ```
-## Reboot and verify iGPU hardware passthough is working in the Ubuntu VM
+### Reboot and verify iGPU hardware passthough is working in the Ubuntu VM
 Check to see if your VGA adapter is available
 ```sh
 lspci -nnv | grep VGA
