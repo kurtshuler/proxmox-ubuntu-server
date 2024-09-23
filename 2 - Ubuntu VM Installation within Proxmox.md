@@ -198,7 +198,7 @@ PCI-Express: YES (requires 'machine: q35' in VM config file)
 > <img src="https://github.com/kurtshuler/proxmox-ubuntu-server/blob/main/images/iGPU-passthrough-add-pci-device-check.png" width="500"/>
 
 ### 3.4. Turn off `Display`
-Click on "Display", then "Edit", and set "Graphic Card" to "none", and press OK.
+Click on `Display`, then `Edit`, and set `Graphic Card` to `none`, and press OK.
 >**NOTE:** This will mean that the `>_ Console` in the GUI middle menu will no longer work. You must use the `xterm.js` console or `ssh`.
 
 ### 3.5. Reboot VM and verify
