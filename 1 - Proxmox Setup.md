@@ -1,4 +1,4 @@
-# 1 - Set up Proxmox from scratch
+# 1 - Proxmox Setup
 <!-- TOC tocDepth:2..2 chapterDepth:2..6 -->
 
 - [1. Make a bootable USB with OS images and tools using Ventoy](#1-make-a-bootable-usb-with-os-images-and-tools-using-ventoy)
