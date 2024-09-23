@@ -20,7 +20,10 @@ bash -c "$(wget -qLO - https://github.com/tteck/Proxmox/raw/main/vm/ubuntu2404-v
 > ➡️ Follow tteck's detailed **[Cloud-Init setup](https://github.com/tteck/Proxmox/discussions/2072)** instructions at [https://github.com/tteck/Proxmox/discussions/2072](https://github.com/tteck/Proxmox/discussions/2072)
 
 > ➡️ After the steps above, **STOP at tteck's "Install Docker" step**. We will do that later!
-
+>
+> tteck's Ubuntu Cloud-Init steps are copied here below for your convenience.
+#### Click on `Cloud-Init` in the VM's vertical middle menu bar
+#### Fill in the `Cloud-Init` settings
 
 ### In VM terminal, install files required for iGPU hardware passthrough
 ```diff
