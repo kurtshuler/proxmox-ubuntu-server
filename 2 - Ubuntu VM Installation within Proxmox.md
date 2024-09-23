@@ -23,7 +23,14 @@ bash -c "$(wget -qLO - https://github.com/tteck/Proxmox/raw/main/vm/ubuntu2404-v
 >
 > tteck's Ubuntu Cloud-Init steps are copied here below for your convenience.
 #### Click on `Cloud-Init` in the VM's vertical middle menu bar
+> <img src="https://github.com/kurtshuler/proxmox-ubuntu-server/blob/main/images/VM-settings-Cloud-Init.png" width="500"/>
 #### Fill in the `Cloud-Init` settings
+> 1. Set user to `root`
+> 2. Give root user a password
+> 3. Set to `No` (not enough storage, yet)
+> 4. Set network settings (IP/CIDR and gateway)
+> 5. Click `Regenerate Image`
+> <img src="https://github.com/kurtshuler/proxmox-ubuntu-server/blob/main/images/VM-settings-Cloud-Init-details.png" width="500"/>
 
 ### In VM terminal, install files required for iGPU hardware passthrough
 ```diff
