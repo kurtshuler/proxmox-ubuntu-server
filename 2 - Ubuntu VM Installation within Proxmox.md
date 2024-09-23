@@ -1,5 +1,4 @@
 # 2 - Ubuntu VM installation within Proxmox
-==========================================
 There are (2) methods to install Ubuntu Server OS and I prefer the Cloud-Init Server install over the manual Server Live ISO install.
 
 ## Cloud-Init Server install using tteck's Proxmox VE Helper script
