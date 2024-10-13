@@ -341,6 +341,14 @@ lspci -v | grep -e VGA
    ```yaml
    00:02.0 VGA compatible controller: Intel Corporation Alder Lake-N [UHD Graphics] (prog-if 00 [VGA controller])
 ```
+## 6. Set up Proxmox SSL certificates using Let’s Encrypt and Cloudflare
+>
+> Instructions are at: https://www.derekseaman.com/2023/04/proxmox-lets-encrypt-ssl-the-easy-button.html
+>
+## 7. Set up NUT UPS Monitoring
+>
+> Instructions for NUT server and client installation on Proxmox bare metal server are at: https://technotim.live/posts/NUT-server-guide/
+>
 # Next Steps
 
 ~~[1 - Set up Proxmox from scratch](1%20-%20Proxmox%20Setup.md)~~
