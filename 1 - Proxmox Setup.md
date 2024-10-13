@@ -1,6 +1,7 @@
 # 1 - Proxmox Setup
-**Contents:**
+
 <!-- TOC tocDepth:2..2 chapterDepth:2..6 anchorMode:github-->
+
 - [1. Make a bootable USB drive with OS images and tools using Ventoy](#1-make-a-bootable-usb-drive-with-os-images-and-tools-using-ventoy)
 - [2. Proxmox post-install setup](#2-proxmox-post-install-setup)
 - [3. Set up the Proxmox terminal](#3-set-up-the-proxmox-terminal)
@@ -8,6 +9,7 @@
 - [5. Set up iGPU passthrough in Proxmox Host](#5-set-up-igpu-passthrough-in-proxmox-host)
 - [6. Set up Proxmox SSL certificates using Lets Encrypt and Cloudflare](#6-set-up-proxmox-ssl-certificates-using-lets-encrypt-and-cloudflare)
 - [7. Set up NUT UPS Monitoring](#7-set-up-nut-ups-monitoring)
+- [8. Set up Proxmox Backup Server (PBS) backup to Synology NAS](#8-set-up-proxmox-backup-server-pbs-backup-to-synology-nas)
 
 <!-- /TOC -->
 -----------------
@@ -351,6 +353,8 @@ lspci -v | grep -e VGA
 >
 > Instructions for NUT server and client installation on Proxmox bare metal server are at: https://technotim.live/posts/NUT-server-guide/
 >
+## 8. Set up Proxmox Backup Server (PBS) backup to Synology NAS
+
 # Next Steps
 
 ~~[1 - Set up Proxmox from scratch](1%20-%20Proxmox%20Setup.md)~~
