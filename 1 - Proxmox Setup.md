@@ -1,5 +1,5 @@
 # 1 - Proxmox Setup
-<!-- TOC tocDepth:2..3 chapterDepth:2..6 -->
+<!-- TOC tocDepth:2..3 chapterDepth:2..6 anchorMode:github-->
 
 - [1. Make a bootable USB drive with OS images and tools using Ventoy](#1-make-a-bootable-usb-drive-with-os-images-and-tools-using-ventoy)
 - [2. Proxmox post-install setup](#2-proxmox-post-install-setup)
@@ -36,13 +36,13 @@
 > **After** you have created the Ventoy USB, you can **copy files to it** using your Mac or PC.
    
 Important ISO images:
-   | ISO | URL |
-   |-----|-----|
-   | System Rescue ISO | https://www.system-rescue.org/Download/ |
-   | Proxmox PVE and PBS ISOs | https://www.proxmox.com/en/downloads |
-   | Ubuntu Server Live Install ISO | https://releases.ubuntu.com/24.04/ubuntu-24.04-live-server-amd64.iso|
-   | Ubuntu Server Cloud-Init Install ISO | https://cloud-images.ubuntu.com/noble/current/ |
-   | Ubuntu DESKTOP ISO | https://ubuntu.com/download/desktop/ |
+   | ISO                                  | URL                                                                  |
+   | ------------------------------------ | -------------------------------------------------------------------- |
+   | System Rescue ISO                    | https://www.system-rescue.org/Download/                              |
+   | Proxmox PVE and PBS ISOs             | https://www.proxmox.com/en/downloads                                 |
+   | Ubuntu Server Live Install ISO       | https://releases.ubuntu.com/24.04/ubuntu-24.04-live-server-amd64.iso |
+   | Ubuntu Server Cloud-Init Install ISO | https://cloud-images.ubuntu.com/noble/current/                       |
+   | Ubuntu DESKTOP ISO                   | https://ubuntu.com/download/desktop/                                 |
 
 ## 2. Proxmox post-install setup
 ### 2.1. Check that SSH is running
