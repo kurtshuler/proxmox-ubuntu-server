@@ -23,7 +23,7 @@
    - [5.3. Configure VFIO for PCIe Passthrough](#53-configure-vfio-for-pcie-passthrough)
    - [5.4. Blacklist Proxmox host device drivers](#54-blacklist-proxmox-host-device-drivers)
    - [5.5. Verify all changes](#55-verify-all-changes)
-- [6. Set up Proxmox SSL certificates using Let’s Encrypt and Cloudflare](#6-set-up-proxmox-ssl-certificates-using-let’s-encrypt-and-cloudflare)
+- [6. Set up Proxmox SSL certificates using Lets Encrypt and Cloudflare](#6-set-up-proxmox-ssl-certificates-using-lets-encrypt-and-cloudflare)
 - [7. Set up NUT UPS Monitoring](#7-set-up-nut-ups-monitoring)
 
 <!-- /TOC -->
@@ -360,7 +360,7 @@ lspci -v | grep -e VGA
    ```yaml
    00:02.0 VGA compatible controller: Intel Corporation Alder Lake-N [UHD Graphics] (prog-if 00 [VGA controller])
 ```
-## 6. Set up Proxmox SSL certificates using Let’s Encrypt and Cloudflare
+## 6. Set up Proxmox SSL certificates using Lets Encrypt and Cloudflare
 >
 > Instructions are at: https://www.derekseaman.com/2023/04/proxmox-lets-encrypt-ssl-the-easy-button.html
 >
