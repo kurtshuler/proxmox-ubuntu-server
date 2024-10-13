@@ -1,11 +1,30 @@
 # 1 - Proxmox Setup
-<!-- TOC tocDepth:2..2 chapterDepth:2..6 -->
+<!-- TOC tocDepth:2..3 chapterDepth:2..6 -->
 
-- [1. Make a bootable USB with OS images and tools using Ventoy](#1-make-a-bootable-usb-with-os-images-and-tools-using-ventoy)
+- [1. Make a bootable USB drive with OS images and tools using Ventoy](#1-make-a-bootable-usb-drive-with-os-images-and-tools-using-ventoy)
 - [2. Proxmox post-install setup](#2-proxmox-post-install-setup)
+   - [2.1. Check that SSH is running](#21-check-that-ssh-is-running)
+   - [2.2. Run tteck's Proxmox VE Post Install Script](#22-run-ttecks-proxmox-ve-post-install-script)
+   - [2.3. Set up IKoolcore-specific Proxmox summary](#23-set-up-ikoolcore-specific-proxmox-summary)
+   - [2.4. Run tteck's Proxmox VE Processor Microcode Script](#24-run-ttecks-proxmox-ve-processor-microcode-script)
 - [3. Set up the Proxmox terminal](#3-set-up-the-proxmox-terminal)
+   - [3.1. Install neofetch](#31-install-neofetch)
+   - [3.2. Install Oh My Bash](#32-install-oh-my-bash)
+   - [3.3. Add plugins and completions to `.bashrc`](#33-add-plugins-and-completions-to-bashrc)
+   - [3.4. Install iTerm shell integration:](#34-install-iterm-shell-integration)
 - [4. Configure Proxmox alerts](#4-configure-proxmox-alerts)
-- [5. Set up iGPU passthrough in Proxmox Host (VM steps done in Ubuntu OS checklist)](#5-set-up-igpu-passthrough-in-proxmox-host-vm-steps-done-in-ubuntu-os-checklist)
+   - [4.1. Install dependencies](#41-install-dependencies)
+   - [4.2. Configure app passwords on your Google account](#42-configure-app-passwords-on-your-google-account)
+   - [4.3. Configure postfix](#43-configure-postfix)
+   - [4.4. Fix the "from" name in email](#44-fix-the-from-name-in-email)
+- [5. Set up iGPU passthrough in Proxmox Host](#5-set-up-igpu-passthrough-in-proxmox-host)
+   - [5.1. Make IOMMU changes at boot](#51-make-iommu-changes-at-boot)
+   - [5.2. Load VFIO modules at boot](#52-load-vfio-modules-at-boot)
+   - [5.3. Configure VFIO for PCIe Passthrough](#53-configure-vfio-for-pcie-passthrough)
+   - [5.4. Blacklist Proxmox host device drivers](#54-blacklist-proxmox-host-device-drivers)
+   - [5.5. Verify all changes](#55-verify-all-changes)
+- [6. Set up Proxmox SSL certificates using Let’s Encrypt and Cloudflare](#6-set-up-proxmox-ssl-certificates-using-let’s-encrypt-and-cloudflare)
+- [7. Set up NUT UPS Monitoring](#7-set-up-nut-ups-monitoring)
 
 <!-- /TOC -->
 -----------------
@@ -360,7 +379,3 @@ lspci -v | grep -e VGA
 [4 - USB Drive Hardware Passthrough Setup](4%20-%20USB%20Drive%20Hardware%20Passthrough%20Setup.md)
 
 [5 - Ubuntu OS setup](5%20-%20Ubuntu%20OS%20Setup.md)
-
-
-
-[def]: #configure-proxmox-alerts
