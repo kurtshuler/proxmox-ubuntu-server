@@ -354,6 +354,10 @@ lspci -v | grep -e VGA
 > Instructions for NUT server and client installation on Proxmox bare metal server are at: https://technotim.live/posts/NUT-server-guide/
 >
 ## 8. Set up Proxmox Backup Server (PBS) backup to Synology NAS
+>
+> Instructions are at: https://www.derekseaman.com/2023/04/how-to-setup-synology-nfs-for-proxmox-backup-server-datastore.html
+>
+
 
 # Next Steps
 
