@@ -135,6 +135,47 @@ Check  UFW status
 sudo ufw status
 ```
 
+## Mount Synology NAS shared NFS drive using `mount` and `fstab`
+
+### Create mount point
+1. Make the mount point:
+   ```sh
+   mkdir /mnt/nas
+   ```
+
+3. Mount your partition to the mount point:
+   ```sh
+   mount nas.kurtshuler.net:/volume1/data /mnt/nas
+   ```
+
+5. Verify the mount is correct:
+   ```sh
+   df -HT
+   ```
+## Update `/etc/fstab` file so the Synology shared drive will always be mounted at boot time
+
+1. Open Terminal and install `nfs-common`: 
+   ```sh
+   sudo apt install nfs-common
+   ```
+3. Open `fstab`:
+   ```sh
+   nano /etc/fstab
+   ```
+
+4. Append this line:
+   ```EditorConfig
+   nas.kurtshuler.net:/volume1/data /mnt/nas nfs defaults        0       0
+   ```
+
+5. Reboot and check
+   ```sh
+   reboot
+   ```
+   ```sh
+   df -HT
+   ```
+
 # Next Steps
 
 ~~[1 - Set up Proxmox from scratch](1%20-%20Proxmox%20Setup.md)~~
