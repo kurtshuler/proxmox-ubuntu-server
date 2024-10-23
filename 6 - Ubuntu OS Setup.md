@@ -18,12 +18,12 @@ adduser kurt
 adduser kurt sudo
 ```
 ### Update Ubuntu OS
-```shell-script
+```shell
 sudo apt update
 sudo apt upgrade
 ```
 ### Install basic/required packages
-```shell-script
+```shellcheck
 sudo apt install sudo linux-generic ca-certificates curl gnupg lsb-release ntp htop zip unzip gnupg apt-transport-https ca-certificates net-tools ncdu apache2-utils git neofetch vsftpd mc
 ```
 > NOTE: `linux-generic` is required to enable GPU passthrough from Proxmox to the Ubuntu VM. It is not included in the Ubuntu Cloud-Init distribution used by the Tteck Ubuntu installation script.
